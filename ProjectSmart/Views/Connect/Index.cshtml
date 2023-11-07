@@ -1,0 +1,38 @@
+﻿@{
+}
+@model Requirements;
+<h1 id="titles" class="d-flex justify-content-start mt-2 pt-2 ms-5 ps-5">CONNECT</h1>
+
+<hr>
+
+<div id="container-fluid d-flex">
+    <form asp-action="" asp-controller="" method="POST">
+        <div class="container-fluid ms-5 ps-5">
+            <div class="mb-3 me-5 pe-5">
+                <label asp-for="Subject" class="form-label">
+                    <h3>SUBJECT:</h3>
+                </label>
+                <input asp-for="Subject" class="form-control" placeholder="Subject..." autocomplete="off" required>
+            </div>
+            <div class="mb-3 me-5 pe-5">
+                <label asp-for="Content" class="form-label">
+                    <h3>CONTENT:</h3>
+                </label>
+                <input asp-for="Content" class="form-control" rows="8" placeholder="Write your content here..." autocomplete="off" required></input>
+                <input type="submit" name="submit" id="submit" class="btn btn-warning mt-2" value="SUBMIT">
+            </div>
+        </div>
+    </form>
+
+    <form asp-action="" asp-controller=""  method="POST">
+        <div class="container-fluid ms-5 ps-5">
+            <div class="mb-3 me-5 pe-5">
+                <label for="Textarea2" class="form-label">
+                    <h3>Write a Comment:</h3>
+                </label>
+                <textarea class="form-control" id="Textarea2" rows="8" placeholder="Write a comment here..."></textarea>
+                <input type="submit" name="submit" id="submit" class="btn btn-warning mt-2 mb-4" value="SUBMIT">
+            </div>
+        </div>
+    </form>
+</div>

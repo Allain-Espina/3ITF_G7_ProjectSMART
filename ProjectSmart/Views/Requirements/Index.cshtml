@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1 id="titles" class="d-flex justify-content-start mt-2 pt-2 ms-5 ps-5">UPDATE TRANSCRIPT OF RECORDS</h1>
+
+<hr>
+
+<form asp-action="" asp-controller="" method="POST">
+    <div class="container-fluid ms-5 ps-5">
+        <div class="mb-3 me-5 pe-5 col-xs-4">
+            <label for="email" class="form-label">
+                <h2>Please type in your Email Address and upload your Transcript of Records in PDF file format.</h2><br>
+                <h3>DOST-SEI Scholar Email Address</h3>
+            </label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="Subject..." autocomplete="off" required>
+        </div>
+        <div class="mb-3 me-5 pe-5">
+            <label for="formFileMultiple" class="form-label"><h3>Upload Transcript of Records</h3></label>
+            <input class="form-control" type="file" id="formFileMultiple" multiple>
+            <input type="submit" name="submit" id="submit" class="btn btn-warning mt-4" value="SUBMIT">
+        </div>
+    </div>
+</form>
