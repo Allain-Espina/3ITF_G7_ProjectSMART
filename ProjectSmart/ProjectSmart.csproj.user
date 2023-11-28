@@ -4,10 +4,6 @@
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup>
-<<<<<<< HEAD
-    <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
-=======
     <ActiveDebugProfile>ProjectSmart</ActiveDebugProfile>
->>>>>>> 9e77a6e55748dbd7fcf3f0801aa4e721c62de1f6
   </PropertyGroup>
 </Project>
