@@ -26,21 +26,34 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5 pe-5">
-                        <li class="nav-item">
-                            <a class="w3-bar-item w3-button" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="w3-bar-item w3-button" asp-area="" asp-controller="Requirements" asp-action="Index">Requirements</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="w3-bar-item w3-button" asp-area="" asp-controller="Connect" asp-action="Index">Connect</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="w3-bar-item w3-button" asp-area="" asp-controller="Scholarship" asp-action="Index">Scholarship</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="w3-bar-item w3-button" asp-area="" asp-controller="About" asp-action="Index">About</a>
-                        </li>
+                        @if (User.IsInRole("Scholar"))
+                        {
+                            <li class="nav-item">
+                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Requirements" asp-action="Index">Requirements</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Connect" asp-action="Index">Connect</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Scholarship" asp-action="Index">Scholarship</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="About" asp-action="Index">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
+                            </li>
+                        }
+                         @if (!User.IsInRole("Scholar"))
+                        {
+                            <li class="nav-item">
+                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Account" asp-action="ScholarLogin">Login as a Scholar</a>
+                            </li>
+                        }
+
                         <li>
                             <div class="dropdown d-flex justify-content-center me-5 pe-5">
                                 <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
