@@ -251,12 +251,19 @@ samp {
   unicode-bidi: bidi-override;
 }
 
+<style >
+.accordion-item.show {
+    background-color: yellow; 
+}
+
+</style >
+
 pre {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  overflow: auto;
-  font-size: 0.875em;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+    font-size: 0.875em;
 }
 pre code {
   font-size: inherit;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Acer\source\repos\Group7_ProjectSmart\ProjectSmart\obj\Debug\net6.0\ProjectSmart.csproj.AssemblyReference.cache
 C:\Users\Acer\source\repos\Group7_ProjectSmart\ProjectSmart\obj\Debug\net6.0\ProjectSmart.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Acer\source\repos\Group7_ProjectSmart\ProjectSmart\obj\Debug\net6.0\ProjectSmart.AssemblyInfoInputs.cache
@@ -85,3 +86,35 @@ C:\Users\Acer\source\repos\Group7_ProjectSmart\ProjectSmart\obj\Debug\net6.0\ref
 C:\Users\Acer\source\repos\Group7_ProjectSmart\ProjectSmart\obj\Debug\net6.0\ProjectSmart.pdb
 C:\Users\Acer\source\repos\Group7_ProjectSmart\ProjectSmart\obj\Debug\net6.0\ProjectSmart.genruntimeconfig.cache
 C:\Users\Acer\source\repos\Group7_ProjectSmart\ProjectSmart\obj\Debug\net6.0\ref\ProjectSmart.dll
+=======
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\ProjectSmart.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\ProjectSmart.AssemblyInfoInputs.cache
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\ProjectSmart.AssemblyInfo.cs
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\ProjectSmart.csproj.CoreCompileInputs.cache
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\ProjectSmart.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\ProjectSmart.RazorAssemblyInfo.cache
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\ProjectSmart.RazorAssemblyInfo.cs
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\bin\Debug\net6.0\appsettings.json
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\bin\Debug\net6.0\ProjectSmart.staticwebassets.runtime.json
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\bin\Debug\net6.0\ProjectSmart.exe
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\bin\Debug\net6.0\ProjectSmart.deps.json
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\bin\Debug\net6.0\ProjectSmart.runtimeconfig.json
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\bin\Debug\net6.0\ProjectSmart.dll
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\bin\Debug\net6.0\ProjectSmart.pdb
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\staticwebassets\msbuild.ProjectSmart.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\staticwebassets\msbuild.build.ProjectSmart.props
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ProjectSmart.props
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ProjectSmart.props
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\scopedcss\bundle\ProjectSmart.styles.css
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\scopedcss\projectbundle\ProjectSmart.bundle.scp.css
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\ProjectSmart.dll
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\refint\ProjectSmart.dll
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\ProjectSmart.pdb
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\ProjectSmart.genruntimeconfig.cache
+C:\Users\LANI VEGA\Desktop\3ITF_G7_ProjectSMART\ProjectSmart\obj\Debug\net6.0\ref\ProjectSmart.dll
+>>>>>>> 9e77a6e55748dbd7fcf3f0801aa4e721c62de1f6

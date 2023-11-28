@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "UTwNlcOiv3CkJqqOuIevQsBNMnM2y5uODFU1Gejj4RA1r0Cjxcq9L+gtL2oNnWz/By0ZwIZRtkZjAIhQLZRWkg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\ProjectSmart.csproj",
@@ -96,4 +97,11 @@
       ]
     }
   ]
+=======
+  "dgSpecHash": "Cc/v+FeMK0iSGXhT86JfufbXvZz72hkkBTL8wcskZNkJdaf4LSFnqNY2KjPJDSF5rzbFTCDQcyUb3HhcP+KG7Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\LANI VEGA\\Desktop\\3ITF_G7_ProjectSMART\\ProjectSmart\\ProjectSmart.csproj",
+  "expectedPackageFiles": [],
+  "logs": []
+>>>>>>> 9e77a6e55748dbd7fcf3f0801aa4e721c62de1f6
 }
