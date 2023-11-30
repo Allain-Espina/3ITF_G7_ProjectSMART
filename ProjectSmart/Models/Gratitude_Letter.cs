@@ -7,11 +7,28 @@ namespace ProjectSmart.Models
     {
         [Key]
         public int GL_ID { get; set; }
-        public string ScholarEmailAddress { get; set; }
+
+        [Required]
+        public string? ScholarEmailAddress { get; set; }
+
+        [Display(Name = "Current Term:")]
+        [Required(ErrorMessage = "Please select from the given choices.")]
+        public Term GL_Term { get; set; }
+
+        public string? GL_AcademicYear { get; set; }
+
+        [Required(ErrorMessage = "Please upload a PDF File.")]
+        [FileExtensions(Extensions = "pdf")]
+        [Display(Name = "Gratitude Letter:")]
         [NotMapped]
-        public IFormFile? GL_FileName { get; set; }
+        public IFormFile? GL_File { get; set; }
+
         public string? GL_FilePath { get; set; }
-        public string GL_Status { get; set; }
-        public DateTime? GL_DateUploaded { get; set; }
+
+        [Required]
+        public string? GL_Status { get; set; }
+
+        [Required]
+        public string? GL_DateUploaded { get; set; } = DateTime.Now.Date.ToString("MM/dd/yyyy");
     }
 }

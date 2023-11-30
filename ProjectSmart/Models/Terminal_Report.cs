@@ -3,32 +3,32 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProjectSmart.Models
 {
-    public class Registration_Form
+    public class Terminal_Report
     {
         [Key]
-        public int RF_ID { get; set; }
+        public int TR_ID { get; set; }
 
         [Required]
         public string? ScholarEmailAddress { get; set; }
 
         [Display(Name = "Current Term:")]
         [Required(ErrorMessage = "Please select from the given choices.")]
-        public Term RF_Term { get; set; }
+        public Term TR_Term { get; set; }
 
-        public string? RF_AcademicYear { get; set; }
+        public string? TR_AcademicYear { get; set; }
 
         [Required(ErrorMessage = "Please upload a PDF File.")]
         [FileExtensions(Extensions = "pdf")]
-        [Display(Name = "Registration Form:")]
+        [Display(Name = "Terminal Report Form:")]
         [NotMapped]
-        public IFormFile? RF_File { get; set; }
+        public IFormFile? TR_File { get; set; }
 
-        public string? RF_FilePath { get; set; }
-
-        [Required]
-        public string? RF_Status { get; set; }
+        public string? TR_FilePath { get; set; }
 
         [Required]
-        public string? RF_DateUploaded { get; set; } = DateTime.Now.Date.ToString("MM/dd/yyyy");
+        public string? TR_Status { get; set; }
+
+        [Required]
+        public string? TR_DateUploaded { get; set; } = DateTime.Now.Date.ToString("MM/dd/yyyy");
     }
 }

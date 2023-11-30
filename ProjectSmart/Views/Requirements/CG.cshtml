@@ -21,21 +21,18 @@
         <th>Academic Year</th>
         <th>Status</th>
         <th>Date of Upload</th>
+        <th>Actions</th>
     </tr>
 
     @foreach (var cg in Model)
     {
         <tr>
-            <td>@cg.Term</td>
-            <td>@cg.AcademicYear</td>
+            <td>@cg.CG_Term</td>
+            <td>@cg.CG_AcademicYear</td>
             <td>@cg.CG_Status</td>
-            <td>
-                    @{
-                        var DateOfUpload = cg.CG_DateUploaded;
-                        string UploadDate = String.Format("{0:MM/dd/yyyy}", DateOfUpload);
-                    }
-                    @UploadDate
-            </td>
+            <td>@cg.CG_DateUploaded</td>
+            <td><a style="color: white;" class="btn btn-primary" asp-action="ViewCG" asp-route-id="@cg.CG_ID">Preview</a></td>
         </tr>
     }
 </table>
+

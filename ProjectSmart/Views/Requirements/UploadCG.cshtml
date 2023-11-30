@@ -5,7 +5,7 @@
 }
 @model Certified_Grades
 
-<h1 id="titles" class="d-flex justify-content-start mt-2 pt-2 ms-5 ps-5">UPLOAD TRANSCRIPT OF RECORDS</h1>
+<h1 id="titles" class="d-flex justify-content-start mt-2 pt-2 ms-5 ps-5">UPLOAD CERTIFIED TRUE COPY OF GRADES</h1>
 
 <div class="btn-danger" asp-validation-summary="All"></div>
 
@@ -17,14 +17,9 @@
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="Term"></label>
-        <select class="form-control" asp-for="Term" asp-items="@Html.GetEnumSelectList(typeof(Term))">
+        <label asp-for="CG_Term"></label>
+        <select class="form-control" asp-for="CG_Term" asp-items="@Html.GetEnumSelectList(typeof(Term))">
         </select>
-    </div>
-    <br />
-    <div class="form-group">
-        <label asp-for="AcademicYear" hidden></label>
-        <input class="form-control" asp-for="AcademicYear" value="@ViewBag.Year" readonly hidden>
     </div>
     <br />
     <div class="form-group">
@@ -35,11 +30,6 @@
     <div class="form-group">
         <label asp-for="CG_Status" hidden></label>
         <input class="form-control" asp-for="CG_Status" value="FOR REVIEW" readonly hidden>
-    </div>
-    <br />
-    <div class="form-group">
-        <label asp-for="CG_DateUploaded" hidden></label>
-        <input class="form-control" asp-for="CG_DateUploaded" value="@ViewBag.UploadDate" readonly hidden>
     </div>
     <br />
     <button type="submit" class="btn btn-primary">Submit</button>

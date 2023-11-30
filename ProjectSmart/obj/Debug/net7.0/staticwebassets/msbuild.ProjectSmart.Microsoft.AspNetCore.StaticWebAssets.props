@@ -976,12 +976,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProjectSmart.bundle.scp.css))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ScholarshipRequirements\TranscriptOfRecords\75943a41-8d42-40a3-bd46-5b3559355e1e_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ScholarshipRequirements\CertifiedTrueCopyOfGrades\allaindaniel.espina.cics@ust.edu.ph_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf))">
       <SourceType>Package</SourceType>
       <SourceId>ProjectSmart</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/ProjectSmart</BasePath>
-      <RelativePath>ScholarshipRequirements/TranscriptOfRecords/75943a41-8d42-40a3-bd46-5b3559355e1e_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf</RelativePath>
+      <RelativePath>ScholarshipRequirements/CertifiedTrueCopyOfGrades/allaindaniel.espina.cics@ust.edu.ph_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -990,23 +990,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ScholarshipRequirements\TranscriptOfRecords\75943a41-8d42-40a3-bd46-5b3559355e1e_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ScholarshipRequirements\TranscriptOfRecords\da40282e-499c-4e1b-9ceb-e71618332ea2_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf))">
-      <SourceType>Package</SourceType>
-      <SourceId>ProjectSmart</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/ProjectSmart</BasePath>
-      <RelativePath>ScholarshipRequirements/TranscriptOfRecords/da40282e-499c-4e1b-9ceb-e71618332ea2_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ScholarshipRequirements\TranscriptOfRecords\da40282e-499c-4e1b-9ceb-e71618332ea2_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ScholarshipRequirements\CertifiedTrueCopyOfGrades\allaindaniel.espina.cics@ust.edu.ph_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

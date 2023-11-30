@@ -1,0 +1,10 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Gratitude_Letter
+<h1>Gratitude Letter to the Foundation</h1>
+<button type="button" onclick="history.back()" class="btn btn-secondary">Return</button>
+<br /><br />
+<object data="/@Model.GL_FilePath" type="application/pdf" width="100%" height="500px"></object>
