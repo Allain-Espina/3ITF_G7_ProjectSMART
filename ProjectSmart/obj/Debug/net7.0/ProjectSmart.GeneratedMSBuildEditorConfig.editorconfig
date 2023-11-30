@@ -48,8 +48,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXEluZGV4LmNzaHRtbA==
+[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/CG.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXENHLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/UploadCG.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFVwbG9hZENHLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Scholarship/Index.cshtml]

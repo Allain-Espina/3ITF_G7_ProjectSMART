@@ -9,6 +9,7 @@ namespace ProjectSmart.Data
 
         public DbSet<ScholarUsers> Scholars { get; set; }
         public DbSet<AdminUsers> Admins { get; set; }
+        public DbSet<Certified_Grades> Certified_Grades { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

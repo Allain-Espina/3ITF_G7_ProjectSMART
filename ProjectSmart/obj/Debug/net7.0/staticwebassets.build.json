@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1jJ3i3up725MYjY9mEVZwNc8zgeLmp+fq1O1wgGLx7I=",
+  "Hash": "KRWCWKXIXyTIBBsfr9XSG/BL+yhc/lTiRNN9P80liUM=",
   "Source": "ProjectSmart",
   "BasePath": "_content/ProjectSmart",
   "Mode": "Default",
@@ -2089,6 +2089,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\ScholarshipRequirements\\TranscriptOfRecords\\75943a41-8d42-40a3-bd46-5b3559355e1e_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf",
+      "SourceId": "ProjectSmart",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\",
+      "BasePath": "_content/ProjectSmart",
+      "RelativePath": "ScholarshipRequirements/TranscriptOfRecords/75943a41-8d42-40a3-bd46-5b3559355e1e_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ScholarshipRequirements\\TranscriptOfRecords\\75943a41-8d42-40a3-bd46-5b3559355e1e_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\ScholarshipRequirements\\TranscriptOfRecords\\da40282e-499c-4e1b-9ceb-e71618332ea2_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf",
+      "SourceId": "ProjectSmart",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\",
+      "BasePath": "_content/ProjectSmart",
+      "RelativePath": "ScholarshipRequirements/TranscriptOfRecords/da40282e-499c-4e1b-9ceb-e71618332ea2_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ScholarshipRequirements\\TranscriptOfRecords\\da40282e-499c-4e1b-9ceb-e71618332ea2_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf"
     }
   ]
 }
