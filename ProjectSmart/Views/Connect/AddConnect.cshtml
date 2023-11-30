@@ -1,0 +1,27 @@
+﻿@{
+}
+
+@model Connect;
+
+<h1 id="titles" class="d-flex justify-content-start mt-2 pt-2 ms-5 ps-5">CONNECT</h1>
+
+<hr>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+<form asp-action="AddConnect" asp-controller="Connect" method="post">
+    <div class="card container-fluid pt-2 w-50">
+        <div class="form-group pt-2">
+            <label asp-for="ScholarEmailAddress" hidden></label>
+            <input class="form-control" asp-for="ScholarEmailAddress" value="@User.Identity.Name" readonly hidden>
+            <label asp-for="ConnectTag">Subject</label>
+            <select class="form-control" asp-for="ConnectTag" asp-items="@Html.GetEnumSelectList(typeof(Tag))"></select>
+        </div>
+        <div class="form-group pt-2">
+            <label asp-for="ConnectContent" class="pb-2"></label>
+            <input class="form-control mb-3" asp-for="ConnectContent" autocomplete="off">
+        </div>
+        <div class="float-end mb-3">
+            <button type="submit" class="btn btn-primary btn-sm">Post Comment</button>
+        </div>
+    </div>
+</form>
