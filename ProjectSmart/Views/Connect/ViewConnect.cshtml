@@ -1,0 +1,36 @@
+﻿@{
+}
+
+@model IEnumerable<ProjectSmart.Models.Connect>;
+
+<h1 id="titles" class="d-flex justify-content-start mt-2 pt-2 ms-5 ps-5">CONNECT</h1>
+
+<hr>
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12 col-lg-10 col-xl-8">
+            <div class="card">
+                <div class="card-body">
+                    @foreach (var connect in Model)
+                    {
+                        <div class="d-flex flex-start align-items-center">
+                            <div>
+                                <h6 class="fw-bold text-primary mb-1">@connect.ScholarEmailAddress</h6>
+                                <p class="text-muted small mb-0">
+                                    @connect.ConnectTag | @DateTime.Now
+                                </p>
+                            </div>
+                        </div>
+                        <p class="mt-3 mb-4 pb-2">
+                            @connect.ConnectContent
+                        </p>
+                    }
+                </div>
+                <div class="card-footer py-3">
+                    <a class="btn btn-primary" asp-action="AddConnect">Add a Comment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

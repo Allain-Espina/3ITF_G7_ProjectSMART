@@ -13,6 +13,7 @@ namespace ProjectSmart.Data
         public DbSet<Registration_Form> Registration_Form { get; set; }
         public DbSet<Terminal_Report> Terminal_Report { get; set; }
         public DbSet<Gratitude_Letter> Gratitude_Letter { get; set; }
+        public DbSet<Connect> Connects { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
