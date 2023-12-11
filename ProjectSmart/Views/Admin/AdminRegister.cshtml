@@ -10,7 +10,7 @@
 
 <div class="btn-danger" asp-validation-summary="All"></div>
 
-<form asp-action="AdminRegister" asp-controller="Account">
+<form asp-action="AdminRegister" asp-controller="Admin">
     <div class="form-group">
         <label asp-for="Email"></label>
         <input asp-for="Email">
@@ -77,4 +77,5 @@
     </div>
     <br />
     <input type="submit" class="btn btn-primary" value="Submit">
+    <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
 </form>

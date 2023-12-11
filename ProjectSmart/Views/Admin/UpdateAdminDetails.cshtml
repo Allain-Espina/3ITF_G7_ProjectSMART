@@ -1,0 +1,82 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model AdminUsers
+
+<h1>Update Administrator's Account Details</h1>
+
+<div class="btn-danger" asp-validation-summary="All"></div>
+
+<form asp-action="UpdateAdminDetails" asp-controller="Admin">
+    <div class="form-group">
+        <label asp-for="AdminId"></label>
+        <input readonly asp-for="AdminId">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminEmail"></label>
+        <input readonly asp-for="AdminEmail">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminFirstName"></label>
+        <input asp-for="AdminFirstName">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminMiddleName"></label>
+        <input asp-for="AdminMiddleName">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminLastName"></label>
+        <input asp-for="AdminLastName">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminContactNumber"></label>
+        <input asp-for="AdminContactNumber">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminDateOfBirth"></label>
+        <input asp-for="AdminDateOfBirth">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminAddress1"></label>
+        <input asp-for="AdminAddress1">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminAddress2"></label>
+        <input asp-for="AdminAddress2">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminCity"></label>
+        <input asp-for="AdminCity">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminRegion"></label>
+        <input asp-for="AdminRegion">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminPosition"></label>
+        <input asp-for="AdminPosition">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminBranch"></label>
+        <input asp-for="AdminBranch">
+    </div>
+    <br />
+
+    <input type="submit" class="btn btn-primary" value="Submit">
+    <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
+</form>

@@ -1,0 +1,85 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model AdminUsers;
+
+<h1>Deactivate Administrator's Account</h1>
+
+<form asp-controller="Admin" asp-action="AdminDeactivate" method="post">
+    <div class="form-group">
+        <label asp-for="AdminId"></label>
+        <input asp-for="AdminId" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminEmail"></label>
+        <input asp-for="AdminEmail" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminRole"></label>
+        <input asp-for="AdminRole" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminFirstName"></label>
+        <input asp-for="AdminFirstName" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminMiddleName"></label>
+        <input asp-for="AdminMiddleName" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminLastName"></label>
+        <input asp-for="AdminLastName" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminContactNumber"></label>
+        <input asp-for="AdminContactNumber" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminDateOfBirth"></label>
+        <input asp-for="AdminDateOfBirth" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminAddress1"></label>
+        <input asp-for="AdminAddress1" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminAddress2"></label>
+        <input asp-for="AdminAddress2" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminCity"></label>
+        <input asp-for="AdminCity" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminRegion"></label>
+        <input asp-for="AdminRegion" readonly>
+    </div>
+    <br
+    <div class="form-group">
+        <label asp-for="AdminPosition"></label>
+        <input asp-for="AdminPosition" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AdminBranch"></label>
+        <input asp-for="AdminBranch" readonly>
+    </div>
+    <br />
+
+    <button type="submit" class="btn btn-danger">Deactivate Administrator's Account</button>
+    <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
+</form>

@@ -15,7 +15,7 @@
                 aria-label="Slide 3"></button>
     </div>
     @{
-        if (User.IsInRole("Scholar"))
+        if (User.Identity.IsAuthenticated)
         {
             <h1>Welcome, @ViewBag.loggedUser.</h1>
         }

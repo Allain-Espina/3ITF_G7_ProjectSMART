@@ -67,7 +67,7 @@ using (var scope = app.Services.CreateScope())
         var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
         var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
 
-        var roles = new[] { "Admin", "Scholar" };
+        var roles = new[] { "Admin", "Scholar", "Inactive" };
 
         foreach (var role in roles)
         {
@@ -90,6 +90,7 @@ using (var scope = app.Services.CreateScope())
                 MiddleName = "adminMN",
                 LastName = "adminLN",
                 Email = adminEmail,
+                Role = "Admin",
                 PhoneNumber = "0912-345-6789"
             };
 

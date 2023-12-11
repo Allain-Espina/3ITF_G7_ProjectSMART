@@ -10,6 +10,9 @@ namespace ProjectSmart.ViewModels
         [DataType(DataType.EmailAddress)]
         public string? Email { get; set; }
 
+        [Display(Name = "Role:")]
+        public string? Role { get; set; } = "Scholar";
+
         [Display(Name = "First Name:")]
         [Required(ErrorMessage = "Please provide the Scholar's First Name.")]
         public string? FirstName { get; set; }

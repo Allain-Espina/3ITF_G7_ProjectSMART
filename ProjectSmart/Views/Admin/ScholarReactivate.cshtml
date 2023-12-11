@@ -1,0 +1,75 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model ScholarUsers;
+
+<h1>Reactivate Scholar</h1>
+
+<form asp-controller="Admin" asp-action="ScholarReactivate" method="post">
+    <div class="form-group">
+        <label asp-for="ScholarId"></label>
+        <input asp-for="ScholarId" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarEmail"></label>
+        <input asp-for="ScholarEmail" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarRole"></label>
+        <input asp-for="ScholarRole" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarFirstName"></label>
+        <input asp-for="ScholarFirstName" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarMiddleName"></label>
+        <input asp-for="ScholarMiddleName" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarLastName"></label>
+        <input asp-for="ScholarLastName" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarContactNumber"></label>
+        <input asp-for="ScholarContactNumber" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarDateOfBirth"></label>
+        <input asp-for="ScholarDateOfBirth" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarAddress1"></label>
+        <input asp-for="ScholarAddress1" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarAddress2"></label>
+        <input asp-for="ScholarAddress2" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarCity"></label>
+        <input asp-for="ScholarCity" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarRegion"></label>
+        <input asp-for="ScholarRegion" readonly>
+    </div>
+    <br />
+
+    <button type="submit" class="btn btn-success">Reactivate Scholar's Account</button>
+    <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
+</form>
