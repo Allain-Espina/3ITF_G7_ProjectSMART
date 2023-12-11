@@ -36,7 +36,7 @@ namespace ProjectSmart.Controllers
             if (!ModelState.IsValid)
                 return View();
 
-            var result = await _signInManager.PasswordSignInAsync(scholarLoginInfo.Email, scholarLoginInfo.Password, scholarLoginInfo.RememberMe, false);
+            var result = await _signInManager.PasswordSignInAsync(scholarLoginInfo.Email, scholarLoginInfo.Password, false, false);
 
             if (result.Succeeded)
             {
@@ -57,7 +57,7 @@ namespace ProjectSmart.Controllers
             if (!ModelState.IsValid)
                 return View();
 
-            var result = await _signInManager.PasswordSignInAsync(adminLoginInfo.Email, adminLoginInfo.Password, adminLoginInfo.RememberMe, false);
+            var result = await _signInManager.PasswordSignInAsync(adminLoginInfo.Email, adminLoginInfo.Password, false, false);
 
             if (result.Succeeded)
             {
@@ -83,8 +83,6 @@ namespace ProjectSmart.Controllers
         {
             if (!ModelState.IsValid)
                 return View();
-
-
 
             if (ModelState.IsValid)
             {
@@ -155,7 +153,7 @@ namespace ProjectSmart.Controllers
 
                 User newAdmin = new User();
 
-                newAdmin.UserName = adminCredentials.FirstName + " " + adminCredentials.LastName;
+                newAdmin.UserName = adminCredentials.Email;
                 newAdmin.FirstName = adminCredentials.FirstName;
                 newAdmin.MiddleName = adminCredentials.MiddleName;
                 newAdmin.LastName = adminCredentials.LastName;
@@ -169,12 +167,11 @@ namespace ProjectSmart.Controllers
 
                     AdminUsers newAdminInfo = new AdminUsers();
 
-                    newAdminInfo.AdminFirstName = adminCredentials.Email;
+                    newAdminInfo.AdminFirstName = adminCredentials.FirstName;
                     newAdminInfo.AdminMiddleName = adminCredentials.MiddleName;
                     newAdminInfo.AdminLastName = adminCredentials.LastName;
                     newAdminInfo.AdminEmail = adminCredentials.Email;
                     newAdminInfo.AdminContactNumber = adminCredentials.Phone;
-
                     newAdminInfo.AdminDateOfBirth = adminCredentials.DateOfBirth;
                     newAdminInfo.AdminAddress1 = adminCredentials.Address1;
                     newAdminInfo.AdminAddress2 = adminCredentials.Address2;
@@ -201,6 +198,7 @@ namespace ProjectSmart.Controllers
             }
 
             return View(adminCredentials);
+
         }
 
     }

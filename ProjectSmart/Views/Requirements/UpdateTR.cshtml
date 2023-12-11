@@ -3,17 +3,17 @@
 *@
 @{
 }
-@model Terminal_Report
 
-<h1 id="titles" class="d-flex justify-content-start mt-2 pt-2 ms-5 ps-5">UPLOAD SCHOLAR'S TERMINAL REPORT FORM</h1>
+@model Terminal_Report;
+
+<h1>Update Terminal Report Form</h1>
 
 <div class="btn-danger" asp-validation-summary="All"></div>
 
-<hr>
-<form asp-controller="Requirements" asp-action="UploadTR" method="post" enctype="multipart/form-data">
+<form asp-controller="Requirements" asp-action="UpdateTR" method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label asp-for="ScholarEmailAddress" hidden></label>
-        <input class="form-control" asp-for="ScholarEmailAddress" value="@User.Identity.Name" readonly hidden>
+        <label asp-for="ScholarEmailAddress">Student Name</label>
+        <input class="form-control" asp-for="ScholarEmailAddress" readonly>
     </div>
     <br />
     <div class="form-group">
@@ -23,17 +23,15 @@
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="TR_File"></label>
-        <input asp-for="TR_File" class="form-control">
+        <label asp-for="TR_AcademicYear">Academic Year</label>
+        <input class="form-control" asp-for="TR_AcademicYear" readonly>
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="TR_Status" hidden></label>
-        <input class="form-control" asp-for="TR_Status" value="FOR REVIEW" readonly hidden>
+        <label asp-for="TR_File"></label>
+        <input asp-for="TR_File" class="form-control">
     </div>
     <br />
     <button type="submit" class="btn btn-primary">Submit</button>
     <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
 </form>
-
-

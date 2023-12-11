@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/b7cgXeRdUxMocXg/bLVu3kFjgJXlTR8/vIB3uCamiM=",
+  "Hash": "DB3GPbuZApADhQ3PvkfodwB7epVOafRqXCySwdTtLYU=",
   "Source": "ProjectSmart",
   "BasePath": "_content/ProjectSmart",
   "Mode": "Default",
@@ -2091,12 +2091,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\ScholarshipRequirements\\CertifiedTrueCopyOfGrades\\allaindaniel.espina.cics@ust.edu.ph_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf",
+      "Identity": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\ScholarshipRequirements\\CertifiedTrueCopyOfGrades\\allaindaniel.espina.cics@ust.edu.ph_LIWORIZ Class List.pdf",
       "SourceId": "ProjectSmart",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\",
       "BasePath": "_content/ProjectSmart",
-      "RelativePath": "ScholarshipRequirements/CertifiedTrueCopyOfGrades/allaindaniel.espina.cics@ust.edu.ph_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf",
+      "RelativePath": "ScholarshipRequirements/CertifiedTrueCopyOfGrades/allaindaniel.espina.cics@ust.edu.ph_LIWORIZ Class List.pdf",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2105,7 +2105,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\ScholarshipRequirements\\CertifiedTrueCopyOfGrades\\allaindaniel.espina.cics@ust.edu.ph_PROGRESS-REPORT_1-GROUP_3-3ITF.pdf"
+      "OriginalItemSpec": "wwwroot\\ScholarshipRequirements\\CertifiedTrueCopyOfGrades\\allaindaniel.espina.cics@ust.edu.ph_LIWORIZ Class List.pdf"
     }
   ]
 }

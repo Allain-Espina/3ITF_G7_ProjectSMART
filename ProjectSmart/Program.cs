@@ -62,16 +62,50 @@ app.MapControllerRoute(
 
 using (var scope = app.Services.CreateScope())
 {
-    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-
-    var roles = new[] { "Admin", "Scholar" };
-
-    foreach (var role in roles)
+    try
     {
-        if (!await roleManager.RoleExistsAsync(role))
-            await roleManager.CreateAsync(new IdentityRole(role));
+        var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+        var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
 
+        var roles = new[] { "Admin", "Scholar" };
+
+        foreach (var role in roles)
+        {
+            if (!await roleManager.RoleExistsAsync(role))
+            {
+                await roleManager.CreateAsync(new IdentityRole(role));
+            }
+
+        }
+
+        var adminEmail = "admin.sei@dost.gov.ph";
+        var adminUser = userManager.FindByEmailAsync(adminEmail).Result;
+
+        if (adminUser == null)
+        {
+            adminUser = new User
+            {
+                UserName = adminEmail,
+                FirstName = "adminFN",
+                MiddleName = "adminMN",
+                LastName = "adminLN",
+                Email = adminEmail,
+                PhoneNumber = "0912-345-6789"
+            };
+
+            var result = userManager.CreateAsync(adminUser, "Admin12!").Result;
+
+            if (result.Succeeded)
+            {
+                userManager.AddToRoleAsync(adminUser, "Admin").Wait();
+            }
+        }
     }
+    catch(Exception ex)
+    {
+        Console.WriteLine(ex);
+    }
+    
 
 }
 

@@ -24,6 +24,8 @@ namespace ProjectSmart.Models
 
         public string? CG_AcademicYear { get; set; }
 
+        public string? CG_FileName { get; set; }
+
         [Required(ErrorMessage = "Please upload a PDF File.")]
         [FileExtensions(Extensions = "pdf")]
         [Display(Name = "Certified Copy of Grades")]

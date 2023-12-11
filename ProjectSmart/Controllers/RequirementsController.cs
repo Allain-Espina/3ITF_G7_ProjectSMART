@@ -72,12 +72,67 @@ namespace ProjectSmart.Controllers
             int secondYear = DateTime.Now.Year + 1;
             string year = "A.Y. " + firstYear.ToString() + " - " + secondYear.ToString();
 
+            newCGFile.CG_FileName = uniqueFilename;
             newCGFile.CG_AcademicYear = year;
             newCGFile.CG_FilePath = folder + uniqueFilename;
 
             _dbData.Certified_Grades.Add(newCGFile);
             _dbData.SaveChanges();
 
+            return RedirectToAction("CG", _dbData.Certified_Grades);
+
+        }
+
+        [HttpGet]
+        public IActionResult UpdateCG(int id)
+        {
+            Certified_Grades? cg = _dbData.Certified_Grades.FirstOrDefault(cg => cg.CG_ID == id);
+
+            if (cg != null)
+                return View(cg);
+
+            return NotFound();
+        }
+
+        [HttpPost]
+        public IActionResult UpdateCG(Certified_Grades updatedCG)
+        {
+            Certified_Grades? cg = _dbData.Certified_Grades.FirstOrDefault(cg => cg.CG_ID == updatedCG.CG_ID);
+
+            if (!ModelState.IsValid)
+                return View();
+
+            if (updatedCG != null)
+            {
+
+                string folder = "ScholarshipRequirements/CertifiedTrueCopyOfGrades/";
+                string serverFolder = Path.Combine(_environment.WebRootPath, folder);
+                string uniqueFilename = User.Identity.Name + "_" + updatedCG.CG_File.FileName;
+                string filePath = Path.Combine(serverFolder, uniqueFilename);
+
+                string cgUrl = cg.CG_FilePath;
+                string oldPath = Path.Combine(_environment.WebRootPath, cgUrl);
+                if (System.IO.File.Exists(oldPath))
+                {
+                    System.IO.File.Delete(oldPath);
+                }
+
+                //Save the Photo within the specified File Path
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+
+                    updatedCG.CG_File.CopyTo(fileStream);
+                    fileStream.Close();
+                    fileStream.Dispose();
+
+                }
+
+                cg.CG_Term = updatedCG.CG_Term;
+                cg.CG_FilePath = folder + uniqueFilename;
+
+                _dbData.SaveChanges();
+
+            }
             return RedirectToAction("CG", _dbData.Certified_Grades);
 
         }
@@ -143,6 +198,60 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [HttpGet]
+        public IActionResult UpdateRF(int id)
+        {
+            Registration_Form? rf = _dbData.Registration_Form.FirstOrDefault(rf => rf.RF_ID == id);
+
+            if (rf != null)
+                return View(rf);
+
+            return NotFound();
+        }
+
+        [HttpPost]
+        public IActionResult UpdateRF(Registration_Form updatedRF)
+        {
+            Registration_Form? rf = _dbData.Registration_Form.FirstOrDefault(rf => rf.RF_ID == updatedRF.RF_ID);
+
+            if (!ModelState.IsValid)
+                return View();
+
+            if (updatedRF != null)
+            {
+
+                string folder = "ScholarshipRequirements/RegistrationForm/";
+                string serverFolder = Path.Combine(_environment.WebRootPath, folder);
+                string uniqueFilename = User.Identity.Name + "_" + updatedRF.RF_File.FileName;
+                string filePath = Path.Combine(serverFolder, uniqueFilename);
+
+                string rfUrl = rf.RF_FilePath;
+                string oldPath = Path.Combine(_environment.WebRootPath, rfUrl);
+                if (System.IO.File.Exists(oldPath))
+                {
+                    System.IO.File.Delete(oldPath);
+                }
+
+                //Save the Photo within the specified File Path
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+
+                    updatedRF.RF_File.CopyTo(fileStream);
+                    fileStream.Close();
+                    fileStream.Dispose();
+
+                }
+
+                rf.RF_Term = updatedRF.RF_Term;
+                rf.RF_FilePath = folder + uniqueFilename;
+
+                _dbData.SaveChanges();
+
+            }
+            return RedirectToAction("RF", _dbData.Registration_Form);
+
+        }
+
         [Authorize(Roles = "Scholar")]
         public IActionResult TR()
         {
@@ -204,6 +313,60 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [HttpGet]
+        public IActionResult UpdateTR(int id)
+        {
+            Terminal_Report? tr = _dbData.Terminal_Report.FirstOrDefault(tr => tr.TR_ID == id);
+
+            if (tr != null)
+                return View(tr);
+
+            return NotFound();
+        }
+
+        [HttpPost]
+        public IActionResult UpdateTR(Terminal_Report updatedTR)
+        {
+            Terminal_Report? tr = _dbData.Terminal_Report.FirstOrDefault(tr => tr.TR_ID == updatedTR.TR_ID);
+
+            if (!ModelState.IsValid)
+                return View();
+
+            if (updatedTR != null)
+            {
+
+                string folder = "ScholarshipRequirements/TerminalReportForm/";
+                string serverFolder = Path.Combine(_environment.WebRootPath, folder);
+                string uniqueFilename = User.Identity.Name + "_" + updatedTR.TR_File.FileName;
+                string filePath = Path.Combine(serverFolder, uniqueFilename);
+
+                string trUrl = tr.TR_FilePath;
+                string oldPath = Path.Combine(_environment.WebRootPath, trUrl);
+                if (System.IO.File.Exists(oldPath))
+                {
+                    System.IO.File.Delete(oldPath);
+                }
+
+                //Save the Photo within the specified File Path
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+
+                    updatedTR.TR_File.CopyTo(fileStream);
+                    fileStream.Close();
+                    fileStream.Dispose();
+
+                }
+
+                tr.TR_Term = updatedTR.TR_Term;
+                tr.TR_FilePath = folder + uniqueFilename;
+
+                _dbData.SaveChanges();
+
+            }
+            return RedirectToAction("TR", _dbData.Terminal_Report);
+
+        }
+
         [Authorize(Roles = "Scholar")]
         public IActionResult GL()
         {
@@ -261,6 +424,60 @@ namespace ProjectSmart.Controllers
             _dbData.Gratitude_Letter.Add(newGLFile);
             _dbData.SaveChanges();
 
+            return RedirectToAction("GL", _dbData.Gratitude_Letter);
+
+        }
+
+        [HttpGet]
+        public IActionResult UpdateGL(int id)
+        {
+            Gratitude_Letter? gl = _dbData.Gratitude_Letter.FirstOrDefault(gl => gl.GL_ID == id);
+
+            if (gl != null)
+                return View(gl);
+
+            return NotFound();
+        }
+
+        [HttpPost]
+        public IActionResult UpdateGL(Gratitude_Letter updatedGL)
+        {
+            Gratitude_Letter? gl = _dbData.Gratitude_Letter.FirstOrDefault(gl => gl.GL_ID == updatedGL.GL_ID);
+
+            if (!ModelState.IsValid)
+                return View();
+
+            if (updatedGL != null)
+            {
+
+                string folder = "ScholarshipRequirements/GratitudeLetter/";
+                string serverFolder = Path.Combine(_environment.WebRootPath, folder);
+                string uniqueFilename = User.Identity.Name + "_" + updatedGL.GL_File.FileName;
+                string filePath = Path.Combine(serverFolder, uniqueFilename);
+
+                string glUrl = gl.GL_FilePath;
+                string oldPath = Path.Combine(_environment.WebRootPath, glUrl);
+                if (System.IO.File.Exists(oldPath))
+                {
+                    System.IO.File.Delete(oldPath);
+                }
+
+                //Save the Photo within the specified File Path
+                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+
+                    updatedGL.GL_File.CopyTo(fileStream);
+                    fileStream.Close();
+                    fileStream.Dispose();
+
+                }
+
+                gl.GL_Term = updatedGL.GL_Term;
+                gl.GL_FilePath = folder + uniqueFilename;
+
+                _dbData.SaveChanges();
+
+            }
             return RedirectToAction("GL", _dbData.Gratitude_Letter);
 
         }
