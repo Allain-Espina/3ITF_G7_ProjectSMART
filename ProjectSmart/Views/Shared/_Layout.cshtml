@@ -80,6 +80,9 @@
                             <li class="nav-item">
                                 <a class="w3-bar-item w3-button" asp-area="" asp-controller="Admin" asp-action="AdminAccounts">Administrators</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Admin" asp-action="InactiveAdmins">Inactive Admins</a>
+                            </li>
                         }
                         
                         @if (!User.Identity.IsAuthenticated)

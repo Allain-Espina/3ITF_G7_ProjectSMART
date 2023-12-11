@@ -21,11 +21,24 @@ namespace ProjectSmart.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            /*modelBuilder.Entity<StudentUsers>().HasData(
-                new StudentUsers()
+            modelBuilder.Entity<AdminUsers>().HasData(
+                new AdminUsers()
                 {
-
-                });*/
+                    AdminId = 1,
+                    AdminFirstName = "adminFN",
+                    AdminMiddleName = "adminMN",
+                    AdminLastName = "adminLN",
+                    AdminEmail = "admin.sei@dost.gov.ph",
+                    AdminRole = "Admin",
+                    AdminContactNumber = "0912-345-6789",
+                    AdminDateOfBirth = "12/03/2023",
+                    AdminAddress1 = "Sample Address 1",
+                    AdminAddress2 = "Sample Address 2",
+                    AdminCity = "Taguig City",
+                    AdminRegion = "NCR - National Capital Region",
+                    AdminPosition = "Director",
+                    AdminBranch = "NCR - National Capital Region"
+                });
         }
 
     }
