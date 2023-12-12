@@ -4,7 +4,7 @@
 @{
 }
 
-@model Certified_Grades;
+@model RequirementsModel;
 
 <h1>Update Certified True Copy of Grades</h1>
 
@@ -17,19 +17,19 @@
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="CG_Term"></label>
-        <select class="form-control" asp-for="CG_Term" asp-items="@Html.GetEnumSelectList(typeof(Term))">
+        <label asp-for="Term"></label>
+        <select class="form-control" asp-for="Term" asp-items="@Html.GetEnumSelectList(typeof(Term))">
         </select>
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="CG_AcademicYear">Academic Year</label>
-        <input class="form-control" asp-for="CG_AcademicYear" readonly>
+        <label asp-for="AcademicYear">Academic Year</label>
+        <input class="form-control" asp-for="AcademicYear" readonly>
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="CG_File"></label>
-        <input asp-for="CG_File" class="form-control">
+        <label asp-for="File"></label>
+        <input asp-for="File" class="form-control">
     </div>
     <br />
     <button type="submit" class="btn btn-primary">Submit</button>

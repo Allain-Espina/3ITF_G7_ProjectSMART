@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model RequirementsModel;
+
+<h1>Update Status of Certified True Copy of Grades</h1>
+
+<div class="btn-danger" asp-validation-summary="All"></div>
+
+<form asp-controller="Requirements" asp-action="AdminUpdateCGStatus" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="ScholarEmailAddress">Scholar's Email Address</label>
+        <input class="form-control" asp-for="ScholarEmailAddress" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="Term"></label>
+        <select class="form-control" asp-for="Term" asp-items="@Html.GetEnumSelectList(typeof(Term))" disabled>
+        </select>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="AcademicYear">Academic Year</label>
+        <input class="form-control" asp-for="AcademicYear" readonly>
+    </div>
+    <br />
+
+    <div class="form-group">
+        <label asp-for="Status">Status</label>
+        <select class="form-control" asp-for="Status">
+            <option>FOR REVIEW</option>
+            <option>APPROVED</option>
+            <option>DENIED</option>
+        </select>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
+</form>

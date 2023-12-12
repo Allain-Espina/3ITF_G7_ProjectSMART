@@ -9,181 +9,193 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProjectSmart
 build_property.RootNamespace = ProjectSmart
-build_property.ProjectDir = C:\Users\Acer\source\repos\Group7_ProjectSmart\ProjectSmart\
+build_property.ProjectDir = C:\Users\Acer\source\repos\ProjectSmart\ProjectSmart\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Acer\source\repos\Group7_ProjectSmart\ProjectSmart
+build_property.MSBuildProjectDirectory = C:\Users\Acer\source\repos\ProjectSmart\ProjectSmart
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/About/Index.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Account/AdminLogin.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Account/AdminLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZG1pbkxvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Account/ScholarLogin.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Account/ScholarLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTY2hvbGFyTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Admin/AdminAccounts.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Admin/AdminAccounts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5BY2NvdW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Admin/AdminDeactivate.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Admin/AdminDeactivate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5EZWFjdGl2YXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Admin/AdminReactivate.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Admin/AdminReactivate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5SZWFjdGl2YXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Admin/AdminRegister.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Admin/AdminRegister.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Admin/InactiveAdmins.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Admin/InactiveAdmins.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5hY3RpdmVBZG1pbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Admin/InactiveScholars.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Admin/InactiveScholars.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5hY3RpdmVTY2hvbGFycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Admin/ScholarAccounts.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Admin/ScholarAccounts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2Nob2xhckFjY291bnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Admin/ScholarDeactivate.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Admin/ScholarDeactivate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2Nob2xhckRlYWN0aXZhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Admin/ScholarReactivate.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Admin/ScholarReactivate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2Nob2xhclJlYWN0aXZhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Admin/ScholarRegister.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Admin/ScholarRegister.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2Nob2xhclJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Admin/UpdateAdminDetails.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Admin/UpdateAdminDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlQWRtaW5EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Admin/UpdateScholarDetails.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Admin/UpdateScholarDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlU2Nob2xhckRldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Admin/ViewAdminDetails.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Admin/ViewAdminDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld0FkbWluRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Admin/ViewScholarDetails.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Admin/ViewScholarDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVmlld1NjaG9sYXJEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Connect/AddConnect.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Connect/AddConnect.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ubmVjdFxBZGRDb25uZWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Connect/ViewConnect.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Connect/ViewConnect.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ubmVjdFxWaWV3Q29ubmVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Home/Index.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Home/Privacy.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/CG.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/AdminCG.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXEFkbWluQ0cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/AdminUpdateCGStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXEFkbWluVXBkYXRlQ0dTdGF0dXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/AdminViewCG.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXEFkbWluVmlld0NHLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/CG.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXENHLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/GL.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/GL.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXEdMLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/RF.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/RF.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFJGLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/TR.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/TR.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFRSLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/UpdateCG.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/UpdateCG.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFVwZGF0ZUNHLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/UpdateGL.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/UpdateGL.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFVwZGF0ZUdMLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/UpdateRF.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/UpdateRF.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFVwZGF0ZVJGLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/UpdateTR.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/UpdateTR.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFVwZGF0ZVRSLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/UploadCG.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/UploadCG.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFVwbG9hZENHLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/UploadGL.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/UploadGL.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFVwbG9hZEdMLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/UploadRF.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/UploadRF.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFVwbG9hZFJGLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/UploadTR.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/UploadTR.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFVwbG9hZFRSLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/ViewCG.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/ViewCG.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFZpZXdDRy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/ViewGL.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/ViewGL.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFZpZXdHTC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/ViewRF.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/ViewRF.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFZpZXdSRi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Requirements/ViewTR.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Requirements/ViewTR.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVxdWlyZW1lbnRzXFZpZXdUUi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Scholarship/Index.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Scholarship/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Nob2xhcnNoaXBcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Shared/Error.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/_ViewImports.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/_ViewStart.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/source/repos/Group7_ProjectSmart/ProjectSmart/Views/Shared/_Layout.cshtml]
+[C:/Users/Acer/source/repos/ProjectSmart/ProjectSmart/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-mixtrezqch

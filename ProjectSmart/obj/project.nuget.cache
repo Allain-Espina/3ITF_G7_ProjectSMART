@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PsUlL7/CWHL4qlJUTJoEBPs2D6r3IFeiMITOGuPnWAPNcRLgWozGeMXvrjVQCeYWu5toGVsjH8rw6XCY2K2OTQ==",
+  "dgSpecHash": "irLDU0XK5IhKRq9U1lDBACBDqKK1CNUMsKnpiIj2vjCam2FS24ombY6tAvI1yUWZmWiZAScTxrwCXOltUnRiHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\ProjectSmart.csproj",
+  "projectFilePath": "C:\\Users\\Acer\\source\\repos\\ProjectSmart\\ProjectSmart\\ProjectSmart.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

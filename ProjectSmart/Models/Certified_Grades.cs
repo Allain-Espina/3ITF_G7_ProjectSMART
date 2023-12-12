@@ -18,7 +18,7 @@ namespace ProjectSmart.Models
         [Required]
         public string? ScholarEmailAddress { get; set; }
 
-        [Display(Name = "Current Term:")]
+        [Display(Name = "Current Term")]
         [Required(ErrorMessage = "Please select from the given choices.")]
         public Term CG_Term { get; set; }
 
@@ -26,9 +26,7 @@ namespace ProjectSmart.Models
 
         public string? CG_FileName { get; set; }
 
-        [Required(ErrorMessage = "Please upload a PDF File.")]
         [FileExtensions(Extensions = "pdf")]
-        [Display(Name = "Certified Copy of Grades")]
         [NotMapped]
         public IFormFile? CG_File { get; set; }
 

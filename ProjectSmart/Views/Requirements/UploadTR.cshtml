@@ -3,7 +3,7 @@
 *@
 @{
 }
-@model Terminal_Report
+@model RequirementsModel
 
 <h1 id="titles" class="d-flex justify-content-start mt-2 pt-2 ms-5 ps-5">UPLOAD SCHOLAR'S TERMINAL REPORT FORM</h1>
 
@@ -17,19 +17,19 @@
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="TR_Term"></label>
-        <select class="form-control" asp-for="TR_Term" asp-items="@Html.GetEnumSelectList(typeof(Term))">
+        <label asp-for="Term"></label>
+        <select class="form-control" asp-for="Term" asp-items="@Html.GetEnumSelectList(typeof(Term))">
         </select>
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="TR_File"></label>
-        <input asp-for="TR_File" class="form-control">
+        <label asp-for="File"></label>
+        <input asp-for="File" class="form-control">
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="TR_Status" hidden></label>
-        <input class="form-control" asp-for="TR_Status" value="FOR REVIEW" readonly hidden>
+        <label asp-for="Status" hidden></label>
+        <input class="form-control" asp-for="Status" value="FOR REVIEW" readonly hidden>
     </div>
     <br />
     <button type="submit" class="btn btn-primary">Submit</button>

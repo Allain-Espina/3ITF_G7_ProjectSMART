@@ -3,37 +3,35 @@
 *@
 @{
 }
-@model Registration_Form
 
-<h1 id="titles" class="d-flex justify-content-start mt-2 pt-2 ms-5 ps-5">UPLOAD SCHOLAR'S REGISTRATION FORM</h1>
+@model RequirementsModel;
+
+<h1>Update Registration Form</h1>
 
 <div class="btn-danger" asp-validation-summary="All"></div>
 
-<hr>
-<form asp-controller="Requirements" asp-action="UploadRF" method="post" enctype="multipart/form-data">
+<form asp-controller="Requirements" asp-action="UpdateRF" method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label asp-for="ScholarEmailAddress" hidden></label>
-        <input class="form-control" asp-for="ScholarEmailAddress" value="@User.Identity.Name" readonly hidden>
+        <label asp-for="ScholarEmailAddress">Student Name</label>
+        <input class="form-control" asp-for="ScholarEmailAddress" readonly>
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="RF_Term"></label>
-        <select class="form-control" asp-for="RF_Term" asp-items="@Html.GetEnumSelectList(typeof(Term))">
+        <label asp-for="Term"></label>
+        <select class="form-control" asp-for="Term" asp-items="@Html.GetEnumSelectList(typeof(Term))">
         </select>
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="RF_File"></label>
-        <input asp-for="RF_File" class="form-control">
+        <label asp-for="AcademicYear">Academic Year</label>
+        <input class="form-control" asp-for="AcademicYear" readonly>
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="RF_Status" hidden></label>
-        <input class="form-control" asp-for="RF_Status" value="FOR REVIEW" readonly hidden>
+        <label asp-for="File"></label>
+        <input asp-for="File" class="form-control">
     </div>
     <br />
     <button type="submit" class="btn btn-primary">Submit</button>
     <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
 </form>
-
-
