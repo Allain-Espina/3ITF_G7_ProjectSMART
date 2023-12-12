@@ -26,18 +26,18 @@ namespace ProjectSmart.Models
 
         public string? CG_FileName { get; set; }
 
-        [Required(ErrorMessage = "Please upload a PDF File.")]
-        [FileExtensions(Extensions = "pdf")]
-        [Display(Name = "Certified Copy of Grades")]
+        //[Required(ErrorMessage = "Please upload a PDF File.")]
+        [FileExtensions(Extensions = "pdf", ErrorMessage = "Please upload your Certified True Copy of Grades in PDF Format.")]
+        [Display(Name = "Certified True Copy of Grades")]
         [NotMapped]
         public IFormFile? CG_File { get; set; }
 
         public string? CG_FilePath { get; set; }
 
-        [Required]
+        //[Required]
         public string? CG_Status { get; set; }
 
-        [Required]
+        //[Required]
         public string? CG_DateUploaded { get; set; } = DateTime.Now.Date.ToString("MM/dd/yyyy");
     }
 }

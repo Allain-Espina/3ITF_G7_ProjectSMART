@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model Certified_Grades;
+
+<h1>Scholar's Certified True Copy of Grades</h1>
+
+<table class="table table-hover">
+    <tr>
+        <th>Email Address:</th>
+        <td>@Model.ScholarEmailAddress</td>
+    </tr>
+    <tr>
+        <th>Term:</th>
+        <td>@Model.CG_Term</td>
+    </tr>
+    <tr>
+        <th>Academic Year:</th>
+        <td>@Model.CG_AcademicYear</td>
+    </tr>
+    <tr>
+        <th>File Name:</th>
+        <td>@Model.CG_FileName</td>
+    </tr>
+    <tr>
+        <th>File Path:</th>
+        <td>@Model.CG_FilePath</td>
+    </tr>
+    <tr>
+        <th>Date Uploaded:</th>
+        <td>@Model.CG_DateUploaded</td>
+    </tr>
+     <tr>
+        <th>Status:</th>
+        <td>@Model.CG_Status</td>
+    </tr>
+</table>
+
+<a style="color: white;" class="btn btn-primary" asp-action="AdminCG">Return</a>

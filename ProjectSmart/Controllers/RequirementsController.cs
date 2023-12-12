@@ -137,6 +137,52 @@ namespace ProjectSmart.Controllers
 
         }
 
+        public IActionResult AdminCG()
+        {
+
+            return View("AdminCG", _dbData.Certified_Grades);
+        }
+
+        public IActionResult AdminCheckCG(int id)
+        {
+
+            Certified_Grades? cgFile = _dbData.Certified_Grades.FirstOrDefault(cg => cg.CG_ID == id);
+
+            if (cgFile != null)
+            {
+
+                return View(cgFile);
+
+            }
+            return NotFound();
+
+        }
+
+        public IActionResult AdminUpdateCGStatus(int id)
+        {
+
+            Certified_Grades? cg = _dbData.Certified_Grades.FirstOrDefault(cg => cg.CG_ID == id);
+
+            if (cg != null)
+                return View(cg);
+
+            return NotFound();
+
+        }
+
+        [HttpPost]
+        public IActionResult AdminUpdateCGStatus(Certified_Grades cgUpdated)
+        {
+
+            Certified_Grades? cg = _dbData.Certified_Grades.FirstOrDefault(cg => cg.CG_ID == cgUpdated.CG_ID);
+
+            cg.CG_Status = cgUpdated.CG_Status;
+            _dbData.SaveChanges();
+
+            return RedirectToAction("AdminCG", _dbData.Certified_Grades);
+
+        }
+
         [Authorize(Roles = "Scholar")]
         public IActionResult RF()
         {
@@ -249,6 +295,52 @@ namespace ProjectSmart.Controllers
 
             }
             return RedirectToAction("RF", _dbData.Registration_Form);
+
+        }
+
+        public IActionResult AdminRF()
+        {
+
+            return View("AdminRF", _dbData.Registration_Form);
+        }
+
+        public IActionResult AdminCheckRF(int id)
+        {
+
+            Registration_Form? rfFile = _dbData.Registration_Form.FirstOrDefault(rf => rf.RF_ID == id);
+
+            if (rfFile != null)
+            {
+
+                return View(rfFile);
+
+            }
+            return NotFound();
+
+        }
+
+        public IActionResult AdminUpdateRFStatus(int id)
+        {
+
+            Registration_Form? rf = _dbData.Registration_Form.FirstOrDefault(rf => rf.RF_ID == id);
+
+            if (rf != null)
+                return View(rf);
+
+            return NotFound();
+
+        }
+
+        [HttpPost]
+        public IActionResult AdminUpdateRFStatus(Registration_Form rfUpdated)
+        {
+
+            Registration_Form? rf = _dbData.Registration_Form.FirstOrDefault(rf => rf.RF_ID == rfUpdated.RF_ID);
+
+            rf.RF_Status = rfUpdated.RF_Status;
+            _dbData.SaveChanges();
+
+            return RedirectToAction("AdminRF", _dbData.Registration_Form);
 
         }
 
@@ -367,6 +459,52 @@ namespace ProjectSmart.Controllers
 
         }
 
+        public IActionResult AdminTR()
+        {
+
+            return View("AdminTR", _dbData.Terminal_Report);
+        }
+
+        public IActionResult AdminCheckTR(int id)
+        {
+
+            Terminal_Report? trFile = _dbData.Terminal_Report.FirstOrDefault(tr => tr.TR_ID == id);
+
+            if (trFile != null)
+            {
+
+                return View(trFile);
+
+            }
+            return NotFound();
+
+        }
+
+        public IActionResult AdminUpdateTRStatus(int id)
+        {
+
+            Terminal_Report? tr = _dbData.Terminal_Report.FirstOrDefault(tr => tr.TR_ID == id);
+
+            if (tr != null)
+                return View(tr);
+
+            return NotFound();
+
+        }
+
+        [HttpPost]
+        public IActionResult AdminUpdateTRStatus(Terminal_Report trUpdated)
+        {
+
+            Terminal_Report? tr = _dbData.Terminal_Report.FirstOrDefault(tr => tr.TR_ID == trUpdated.TR_ID);
+
+            tr.TR_Status = trUpdated.TR_Status;
+            _dbData.SaveChanges();
+
+            return RedirectToAction("AdminTR", _dbData.Terminal_Report);
+
+        }
+
         [Authorize(Roles = "Scholar")]
         public IActionResult GL()
         {
@@ -479,6 +617,52 @@ namespace ProjectSmart.Controllers
 
             }
             return RedirectToAction("GL", _dbData.Gratitude_Letter);
+
+        }
+
+        public IActionResult AdminGL()
+        {
+
+            return View("AdminGL", _dbData.Gratitude_Letter);
+        }
+
+        public IActionResult AdminCheckGL(int id)
+        {
+
+            Gratitude_Letter? glFile = _dbData.Gratitude_Letter.FirstOrDefault(gl => gl.GL_ID == id);
+
+            if (glFile != null)
+            {
+
+                return View(glFile);
+
+            }
+            return NotFound();
+
+        }
+
+        public IActionResult AdminUpdateGLStatus(int id)
+        {
+
+            Gratitude_Letter? gl = _dbData.Gratitude_Letter.FirstOrDefault(gl => gl.GL_ID == id);
+
+            if (gl != null)
+                return View(gl);
+
+            return NotFound();
+
+        }
+
+        [HttpPost]
+        public IActionResult AdminUpdateGLStatus(Gratitude_Letter glUpdated)
+        {
+
+            Gratitude_Letter? gl = _dbData.Gratitude_Letter.FirstOrDefault(gl => gl.GL_ID == glUpdated.GL_ID);
+
+            gl.GL_Status = glUpdated.GL_Status;
+            _dbData.SaveChanges();
+
+            return RedirectToAction("AdminGL", _dbData.Gratitude_Letter);
 
         }
 

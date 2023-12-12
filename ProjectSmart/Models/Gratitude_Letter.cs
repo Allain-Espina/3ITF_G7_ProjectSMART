@@ -17,18 +17,20 @@ namespace ProjectSmart.Models
 
         public string? GL_AcademicYear { get; set; }
 
-        [Required(ErrorMessage = "Please upload a PDF File.")]
-        [FileExtensions(Extensions = "pdf")]
+        public string? GL_FileName { get; set; }
+
+        //[Required(ErrorMessage = "Please upload a PDF File.")]
+        [FileExtensions(Extensions = "pdf", ErrorMessage = "Please upload your Gratitude Letter in PDF Format.")]
         [Display(Name = "Gratitude Letter:")]
         [NotMapped]
         public IFormFile? GL_File { get; set; }
 
         public string? GL_FilePath { get; set; }
 
-        [Required]
+        //[Required]
         public string? GL_Status { get; set; }
 
-        [Required]
+        //[Required]
         public string? GL_DateUploaded { get; set; } = DateTime.Now.Date.ToString("MM/dd/yyyy");
     }
 }
