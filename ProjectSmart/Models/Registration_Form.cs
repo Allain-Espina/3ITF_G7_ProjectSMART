@@ -19,7 +19,6 @@ namespace ProjectSmart.Models
 
         public string? RF_FileName { get; set; }
 
-        //[Required(ErrorMessage = "Please upload a PDF File.")]
         [FileExtensions(Extensions = "pdf", ErrorMessage = "Please upload your Registration Form in PDF Format.")]
         [Display(Name = "Registration Form:")]
         [NotMapped]
@@ -27,10 +26,8 @@ namespace ProjectSmart.Models
 
         public string? RF_FilePath { get; set; }
 
-        //[Required]
         public string? RF_Status { get; set; }
 
-        //[Required]
         public string? RF_DateUploaded { get; set; } = DateTime.Now.Date.ToString("MM/dd/yyyy");
     }
 }

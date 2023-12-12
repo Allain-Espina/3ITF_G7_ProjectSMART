@@ -28,6 +28,7 @@ namespace ProjectSmart.Controllers
             return View("CG", _dbData.Certified_Grades.Where(cg => cg.ScholarEmailAddress == User.Identity.Name));
         }
 
+        [Authorize(Roles = "Scholar")]
         public IActionResult ViewCG(int id)
         {
 
@@ -43,12 +44,14 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpGet]
         public IActionResult UploadCG()
         {
             return View();
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpPost]
         public IActionResult UploadCG(Certified_Grades newCGFile)
         {
@@ -60,7 +63,6 @@ namespace ProjectSmart.Controllers
             string uniqueFilename = User.Identity.Name + "_" + newCGFile.CG_File.FileName;
             string filePath = Path.Combine(serverFolder, uniqueFilename);
 
-            //Save the Photo within the specified File Path
             using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
                 newCGFile.CG_File.CopyTo(fileStream);
@@ -83,6 +85,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpGet]
         public IActionResult UpdateCG(int id)
         {
@@ -94,6 +97,7 @@ namespace ProjectSmart.Controllers
             return NotFound();
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpPost]
         public IActionResult UpdateCG(Certified_Grades updatedCG)
         {
@@ -117,7 +121,6 @@ namespace ProjectSmart.Controllers
                     System.IO.File.Delete(oldPath);
                 }
 
-                //Save the Photo within the specified File Path
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
 
@@ -137,12 +140,14 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult AdminCG()
         {
 
             return View("AdminCG", _dbData.Certified_Grades);
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult AdminCheckCG(int id)
         {
 
@@ -158,6 +163,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult AdminUpdateCGStatus(int id)
         {
 
@@ -170,6 +176,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult AdminUpdateCGStatus(Certified_Grades cgUpdated)
         {
@@ -190,6 +197,7 @@ namespace ProjectSmart.Controllers
             return View("RF", _dbData.Registration_Form.Where(rf => rf.ScholarEmailAddress == User.Identity.Name));
         }
 
+        [Authorize(Roles = "Scholar")]
         public IActionResult ViewRF(int id)
         {
 
@@ -205,12 +213,14 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpGet]
         public IActionResult UploadRF()
         {
             return View();
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpPost]
         public IActionResult UploadRF(Registration_Form newRFFile)
         {
@@ -222,7 +232,6 @@ namespace ProjectSmart.Controllers
             string uniqueFilename = User.Identity.Name + "_" + newRFFile.RF_File.FileName;
             string filePath = Path.Combine(serverFolder, uniqueFilename);
 
-            //Save the Photo within the specified File Path
             using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
                 newRFFile.RF_File.CopyTo(fileStream);
@@ -244,6 +253,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpGet]
         public IActionResult UpdateRF(int id)
         {
@@ -255,6 +265,7 @@ namespace ProjectSmart.Controllers
             return NotFound();
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpPost]
         public IActionResult UpdateRF(Registration_Form updatedRF)
         {
@@ -278,7 +289,6 @@ namespace ProjectSmart.Controllers
                     System.IO.File.Delete(oldPath);
                 }
 
-                //Save the Photo within the specified File Path
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
 
@@ -298,12 +308,14 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult AdminRF()
         {
 
             return View("AdminRF", _dbData.Registration_Form);
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult AdminCheckRF(int id)
         {
 
@@ -319,6 +331,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult AdminUpdateRFStatus(int id)
         {
 
@@ -331,6 +344,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult AdminUpdateRFStatus(Registration_Form rfUpdated)
         {
@@ -351,6 +365,7 @@ namespace ProjectSmart.Controllers
             return View("TR", _dbData.Terminal_Report.Where(rf => rf.ScholarEmailAddress == User.Identity.Name));
         }
 
+        [Authorize(Roles = "Scholar")]
         public IActionResult ViewTR(int id)
         {
 
@@ -366,6 +381,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpGet]
         public IActionResult UploadTR()
         {
@@ -383,7 +399,6 @@ namespace ProjectSmart.Controllers
             string uniqueFilename = User.Identity.Name + "_" + newTRFile.TR_File.FileName;
             string filePath = Path.Combine(serverFolder, uniqueFilename);
 
-            //Save the Photo within the specified File Path
             using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
                 newTRFile.TR_File.CopyTo(fileStream);
@@ -405,6 +420,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpGet]
         public IActionResult UpdateTR(int id)
         {
@@ -416,6 +432,7 @@ namespace ProjectSmart.Controllers
             return NotFound();
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpPost]
         public IActionResult UpdateTR(Terminal_Report updatedTR)
         {
@@ -439,7 +456,6 @@ namespace ProjectSmart.Controllers
                     System.IO.File.Delete(oldPath);
                 }
 
-                //Save the Photo within the specified File Path
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
 
@@ -459,12 +475,14 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult AdminTR()
         {
 
             return View("AdminTR", _dbData.Terminal_Report);
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult AdminCheckTR(int id)
         {
 
@@ -480,6 +498,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult AdminUpdateTRStatus(int id)
         {
 
@@ -492,6 +511,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult AdminUpdateTRStatus(Terminal_Report trUpdated)
         {
@@ -512,6 +532,7 @@ namespace ProjectSmart.Controllers
             return View("GL", _dbData.Gratitude_Letter.Where(rf => rf.ScholarEmailAddress == User.Identity.Name));
         }
 
+        [Authorize(Roles = "Scholar")]
         public IActionResult ViewGL(int id)
         {
 
@@ -527,12 +548,14 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpGet]
         public IActionResult UploadGL()
         {
             return View();
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpPost]
         public IActionResult UploadGL(Gratitude_Letter newGLFile)
         {
@@ -544,7 +567,6 @@ namespace ProjectSmart.Controllers
             string uniqueFilename = User.Identity.Name + "_" + newGLFile.GL_File.FileName;
             string filePath = Path.Combine(serverFolder, uniqueFilename);
 
-            //Save the Photo within the specified File Path
             using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
                 newGLFile.GL_File.CopyTo(fileStream);
@@ -566,6 +588,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpGet]
         public IActionResult UpdateGL(int id)
         {
@@ -577,6 +600,7 @@ namespace ProjectSmart.Controllers
             return NotFound();
         }
 
+        [Authorize(Roles = "Scholar")]
         [HttpPost]
         public IActionResult UpdateGL(Gratitude_Letter updatedGL)
         {
@@ -600,7 +624,6 @@ namespace ProjectSmart.Controllers
                     System.IO.File.Delete(oldPath);
                 }
 
-                //Save the Photo within the specified File Path
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
 
@@ -620,12 +643,14 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult AdminGL()
         {
 
             return View("AdminGL", _dbData.Gratitude_Letter);
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult AdminCheckGL(int id)
         {
 
@@ -641,6 +666,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult AdminUpdateGLStatus(int id)
         {
 
@@ -653,6 +679,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult AdminUpdateGLStatus(Gratitude_Letter glUpdated)
         {

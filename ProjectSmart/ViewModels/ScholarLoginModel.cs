@@ -15,8 +15,5 @@ namespace ProjectSmart.ViewModels
         [Required(ErrorMessage = "Password is required.")]
         public string? Password { get; set; }
 
-        [Display(Name = "Remember Me?")]
-        public bool RememberMe { get; set; }
-
     }
 }
