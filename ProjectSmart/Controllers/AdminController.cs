@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ProjectSmart.Data;
 using ProjectSmart.Models;
@@ -17,12 +18,14 @@ namespace ProjectSmart.Controllers
             _dbData = dbData;
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult ScholarRegister()
         {
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> ScholarRegister(ScholarRegisterModel scholarCredentials)
         {
@@ -83,11 +86,13 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult ScholarAccounts()
         {
             return View("ScholarAccounts", _dbData.Scholars.Where(sa => sa.ScholarRole == "Scholar"));
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult ViewScholarDetails(int id)
         {
 
@@ -103,6 +108,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult UpdateScholarDetails(int id)
         {
@@ -114,6 +120,7 @@ namespace ProjectSmart.Controllers
             return NotFound();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult UpdateScholarDetails(ScholarUsers scholarChanges)
         {
@@ -138,6 +145,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult ScholarDeactivate(int id)
         {
@@ -149,6 +157,7 @@ namespace ProjectSmart.Controllers
             return NotFound();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> ScholarDeactivate(ScholarUsers deactivateScholar)
         {
@@ -167,11 +176,13 @@ namespace ProjectSmart.Controllers
             return View("ScholarAccounts", _dbData.Scholars.Where(sa => sa.ScholarRole == "Scholar"));
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult InactiveScholars()
         {
             return View("InactiveScholars", _dbData.Scholars.Where(sa => sa.ScholarRole == "Inactive"));
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult ScholarReactivate(int id)
         {
@@ -183,6 +194,7 @@ namespace ProjectSmart.Controllers
             return NotFound();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> ScholarReactivate(ScholarUsers reactivateScholar)
         {
@@ -203,12 +215,14 @@ namespace ProjectSmart.Controllers
 
         /*-----------*/
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult AdminRegister()
         {
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> AdminRegister(AdminRegisterModel adminCredentials)
         {
@@ -270,11 +284,13 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult AdminAccounts()
         {
             return View("AdminAccounts", _dbData.Admins.Where(aa => aa.AdminRole == "Admin"));
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult ViewAdminDetails(int id)
         {
 
@@ -290,6 +306,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult UpdateAdminDetails(int id)
         {
@@ -301,6 +318,7 @@ namespace ProjectSmart.Controllers
             return NotFound();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult UpdateAdminDetails(AdminUsers adminChanges)
         {
@@ -326,6 +344,7 @@ namespace ProjectSmart.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult AdminDeactivate(int id)
         {
@@ -337,6 +356,7 @@ namespace ProjectSmart.Controllers
             return NotFound();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> AdminDeactivate(AdminUsers deactivateAdmin)
         {
@@ -355,6 +375,7 @@ namespace ProjectSmart.Controllers
             return View("AdminAccounts", _dbData.Admins.Where(aa => aa.AdminRole == "Admin"));
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult InactiveAdmins()
         {
             return View("InactiveAdmins", _dbData.Admins.Where(aa => aa.AdminRole == "Inactive"));
@@ -371,6 +392,7 @@ namespace ProjectSmart.Controllers
             return NotFound();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> AdminReactivate(AdminUsers reactivateAdmin)
         {
