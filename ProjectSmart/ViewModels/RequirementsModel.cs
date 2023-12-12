@@ -20,7 +20,6 @@ namespace ProjectSmart.ViewModels
 
         [Required(ErrorMessage = "Please upload a PDF File.")]
         [FileExtensions(Extensions = "pdf")]
-        [Display(Name = "Certified Copy of Grades")]
         [NotMapped]
         public IFormFile? File { get; set; }
 
