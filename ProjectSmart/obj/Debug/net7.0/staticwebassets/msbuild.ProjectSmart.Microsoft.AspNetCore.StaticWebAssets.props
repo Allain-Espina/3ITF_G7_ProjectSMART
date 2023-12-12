@@ -976,5 +976,69 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ProjectSmart.bundle.scp.css))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ScholarshipRequirements\CertifiedTrueCopyOfGrades\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW1 - ESPINA, ALLAIN DANIEL - 3ITF.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>ProjectSmart</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ProjectSmart</BasePath>
+      <RelativePath>ScholarshipRequirements/CertifiedTrueCopyOfGrades/allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW1 - ESPINA, ALLAIN DANIEL - 3ITF.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ScholarshipRequirements\CertifiedTrueCopyOfGrades\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW1 - ESPINA, ALLAIN DANIEL - 3ITF.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ScholarshipRequirements\GratitudeLetter\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - FIN - HW1 - ESPINA, ALLAIN DANIEL - 3ITF.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>ProjectSmart</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ProjectSmart</BasePath>
+      <RelativePath>ScholarshipRequirements/GratitudeLetter/allaindaniel.espina.cics@ust.edu.ph_ICS26012 - FIN - HW1 - ESPINA, ALLAIN DANIEL - 3ITF.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ScholarshipRequirements\GratitudeLetter\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - FIN - HW1 - ESPINA, ALLAIN DANIEL - 3ITF.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ScholarshipRequirements\RegistrationForm\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW2 - ESPINA, ALLAIN DANIEL - 3ITF.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>ProjectSmart</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ProjectSmart</BasePath>
+      <RelativePath>ScholarshipRequirements/RegistrationForm/allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW2 - ESPINA, ALLAIN DANIEL - 3ITF.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ScholarshipRequirements\RegistrationForm\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW2 - ESPINA, ALLAIN DANIEL - 3ITF.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ScholarshipRequirements\TerminalReportForm\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW3 - ESPINA, ALLAIN DANIEL - 3ITF.pdf))">
+      <SourceType>Package</SourceType>
+      <SourceId>ProjectSmart</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ProjectSmart</BasePath>
+      <RelativePath>ScholarshipRequirements/TerminalReportForm/allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW3 - ESPINA, ALLAIN DANIEL - 3ITF.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ScholarshipRequirements\TerminalReportForm\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW3 - ESPINA, ALLAIN DANIEL - 3ITF.pdf))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>
