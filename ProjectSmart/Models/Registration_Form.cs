@@ -1,11 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Xml.Linq;
-using Microsoft.AspNet.Identity;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProjectSmart.Models
 {
-
     public class Registration_Form
     {
         [Key]
@@ -14,15 +11,15 @@ namespace ProjectSmart.Models
         [Required]
         public string? ScholarEmailAddress { get; set; }
 
-        [Display(Name = "Current Term")]
+        [Display(Name = "Current Term:")]
         [Required(ErrorMessage = "Please select from the given choices.")]
         public Term RF_Term { get; set; }
 
         public string? RF_AcademicYear { get; set; }
 
-        public string? RF_FileName { get; set; }
-
+        [Required(ErrorMessage = "Please upload a PDF File.")]
         [FileExtensions(Extensions = "pdf")]
+        [Display(Name = "Registration Form:")]
         [NotMapped]
         public IFormFile? RF_File { get; set; }
 

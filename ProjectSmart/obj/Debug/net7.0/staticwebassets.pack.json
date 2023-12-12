@@ -5,6 +5,13 @@
       "PackagePath": "staticwebassets\\ProjectSmart.bundle.scp.css"
     },
     {
+<<<<<<< HEAD
+=======
+      "Id": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\ScholarshipRequirements\\CertifiedTrueCopyOfGrades\\allaindaniel.espina.cics@ust.edu.ph_LIWORIZ Class List.pdf",
+      "PackagePath": "staticwebassets\\ScholarshipRequirements\\CertifiedTrueCopyOfGrades\\allaindaniel.espina.cics@ust.edu.ph_LIWORIZ Class List.pdf"
+    },
+    {
+>>>>>>> parent of 68bfef4 (Added Admin-side Requirements Checking (Incomplete))
       "Id": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

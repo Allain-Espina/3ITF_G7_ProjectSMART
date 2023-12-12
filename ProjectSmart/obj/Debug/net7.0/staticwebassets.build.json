@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "1jJ3i3up725MYjY9mEVZwNc8zgeLmp+fq1O1wgGLx7I=",
+=======
+  "Hash": "DB3GPbuZApADhQ3PvkfodwB7epVOafRqXCySwdTtLYU=",
+>>>>>>> parent of 68bfef4 (Added Admin-side Requirements Checking (Incomplete))
   "Source": "ProjectSmart",
   "BasePath": "_content/ProjectSmart",
   "Mode": "Default",
@@ -2089,6 +2093,26 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+<<<<<<< HEAD
+=======
+    },
+    {
+      "Identity": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\ScholarshipRequirements\\CertifiedTrueCopyOfGrades\\allaindaniel.espina.cics@ust.edu.ph_LIWORIZ Class List.pdf",
+      "SourceId": "ProjectSmart",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\",
+      "BasePath": "_content/ProjectSmart",
+      "RelativePath": "ScholarshipRequirements/CertifiedTrueCopyOfGrades/allaindaniel.espina.cics@ust.edu.ph_LIWORIZ Class List.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ScholarshipRequirements\\CertifiedTrueCopyOfGrades\\allaindaniel.espina.cics@ust.edu.ph_LIWORIZ Class List.pdf"
+>>>>>>> parent of 68bfef4 (Added Admin-side Requirements Checking (Incomplete))
     }
   ]
 }

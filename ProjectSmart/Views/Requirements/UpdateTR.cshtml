@@ -4,7 +4,7 @@
 @{
 }
 
-@model RequirementsModel;
+@model Terminal_Report;
 
 <h1>Update Terminal Report Form</h1>
 
@@ -17,19 +17,19 @@
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="Term"></label>
-        <select class="form-control" asp-for="Term" asp-items="@Html.GetEnumSelectList(typeof(Term))">
+        <label asp-for="TR_Term"></label>
+        <select class="form-control" asp-for="TR_Term" asp-items="@Html.GetEnumSelectList(typeof(Term))">
         </select>
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="AcademicYear">Academic Year</label>
-        <input class="form-control" asp-for="AcademicYear" readonly>
+        <label asp-for="TR_AcademicYear">Academic Year</label>
+        <input class="form-control" asp-for="TR_AcademicYear" readonly>
     </div>
     <br />
     <div class="form-group">
-        <label asp-for="File"></label>
-        <input asp-for="File" class="form-control">
+        <label asp-for="TR_File"></label>
+        <input asp-for="TR_File" class="form-control">
     </div>
     <br />
     <button type="submit" class="btn btn-primary">Submit</button>

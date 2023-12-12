@@ -11,15 +11,15 @@ namespace ProjectSmart.Models
         [Required]
         public string? ScholarEmailAddress { get; set; }
 
-        [Display(Name = "Current Term")]
+        [Display(Name = "Current Term:")]
         [Required(ErrorMessage = "Please select from the given choices.")]
         public Term GL_Term { get; set; }
 
         public string? GL_AcademicYear { get; set; }
 
-        public string? GL_FileName { get; set; }
-
+        [Required(ErrorMessage = "Please upload a PDF File.")]
         [FileExtensions(Extensions = "pdf")]
+        [Display(Name = "Gratitude Letter:")]
         [NotMapped]
         public IFormFile? GL_File { get; set; }
 

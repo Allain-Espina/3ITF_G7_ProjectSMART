@@ -68,29 +68,23 @@
                             <li class="nav-item">
                                 <a class="w3-bar-item w3-button" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Admin" asp-action="">UA</a>
+                             <li class="nav-item">
+                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Admin" asp-action="">User Accounts</a>
                             </li>
                             <li class="nav-item">
-                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Admin" asp-action="ScholarAccounts">S</a>
+                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Admin" asp-action="ScholarAccounts">Scholars</a>
                             </li>
                             <li class="nav-item">
-                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Admin" asp-action="InactiveScholars">IS</a>
+                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Admin" asp-action="InactiveScholars">Inactive Scholars</a>
                             </li>
                             <li class="nav-item">
-                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Admin" asp-action="AdminAccounts">A</a>
+                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Admin" asp-action="AdminAccounts">Administrators</a>
                             </li>
                             <li class="nav-item">
-                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Admin" asp-action="InactiveAdmins">IA</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Requirements" asp-action="AdminCG">CG</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
+                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Admin" asp-action="InactiveAdmins">Inactive Admins</a>
                             </li>
                         }
-
+                        
                         @if (!User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">

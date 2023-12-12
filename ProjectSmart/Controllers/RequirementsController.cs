@@ -50,22 +50,20 @@ namespace ProjectSmart.Controllers
         }
 
         [HttpPost]
-        public IActionResult UploadCG(RequirementsModel newCGFile)
+        public IActionResult UploadCG(Certified_Grades newCGFile)
         {
             if (!ModelState.IsValid)
                 return View();
 
-            Certified_Grades? cg = _dbData.Certified_Grades.FirstOrDefault(cg => cg.ScholarEmailAddress == newCGFile.ScholarEmailAddress);
-
             string folder = "ScholarshipRequirements/CertifiedTrueCopyOfGrades/";
             string serverFolder = Path.Combine(_environment.WebRootPath, folder);
-            string uniqueFilename = User.Identity.Name + "_" + newCGFile.File.FileName;
+            string uniqueFilename = User.Identity.Name + "_" + newCGFile.CG_File.FileName;
             string filePath = Path.Combine(serverFolder, uniqueFilename);
 
             //Save the Photo within the specified File Path
             using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
-                newCGFile.File.CopyTo(fileStream);
+                newCGFile.CG_File.CopyTo(fileStream);
                 fileStream.Close();
                 fileStream.Dispose();
             }
@@ -74,15 +72,11 @@ namespace ProjectSmart.Controllers
             int secondYear = DateTime.Now.Year + 1;
             string year = "A.Y. " + firstYear.ToString() + " - " + secondYear.ToString();
 
-            cg.ScholarEmailAddress = newCGFile.ScholarEmailAddress;
-            cg.CG_Term = newCGFile.Term;
-            cg.CG_AcademicYear = year;
-            cg.CG_FileName = uniqueFilename;
-            cg.CG_FilePath = folder + uniqueFilename;
-            cg.CG_DateUploaded = newCGFile.DateUploaded;
-            cg.CG_Status = newCGFile.Status;
+            newCGFile.CG_FileName = uniqueFilename;
+            newCGFile.CG_AcademicYear = year;
+            newCGFile.CG_FilePath = folder + uniqueFilename;
 
-            _dbData.Certified_Grades.Add(cg);
+            _dbData.Certified_Grades.Add(newCGFile);
             _dbData.SaveChanges();
 
             return RedirectToAction("CG", _dbData.Certified_Grades);
@@ -101,9 +95,9 @@ namespace ProjectSmart.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateCG(RequirementsModel updatedCG)
+        public IActionResult UpdateCG(Certified_Grades updatedCG)
         {
-            Certified_Grades? cg = _dbData.Certified_Grades.FirstOrDefault(cg => cg.ScholarEmailAddress == updatedCG.ScholarEmailAddress);
+            Certified_Grades? cg = _dbData.Certified_Grades.FirstOrDefault(cg => cg.CG_ID == updatedCG.CG_ID);
 
             if (!ModelState.IsValid)
                 return View();
@@ -113,7 +107,7 @@ namespace ProjectSmart.Controllers
 
                 string folder = "ScholarshipRequirements/CertifiedTrueCopyOfGrades/";
                 string serverFolder = Path.Combine(_environment.WebRootPath, folder);
-                string uniqueFilename = User.Identity.Name + "_" + updatedCG.File.FileName;
+                string uniqueFilename = User.Identity.Name + "_" + updatedCG.CG_File.FileName;
                 string filePath = Path.Combine(serverFolder, uniqueFilename);
 
                 string cgUrl = cg.CG_FilePath;
@@ -127,13 +121,13 @@ namespace ProjectSmart.Controllers
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
 
-                    updatedCG.File.CopyTo(fileStream);
+                    updatedCG.CG_File.CopyTo(fileStream);
                     fileStream.Close();
                     fileStream.Dispose();
 
                 }
 
-                cg.CG_Term = updatedCG.Term;
+                cg.CG_Term = updatedCG.CG_Term;
                 cg.CG_FilePath = folder + uniqueFilename;
 
                 _dbData.SaveChanges();
@@ -142,60 +136,6 @@ namespace ProjectSmart.Controllers
             return RedirectToAction("CG", _dbData.Certified_Grades);
 
         }
-
-        public IActionResult AdminCG()
-        {
-
-            return View("AdminCG", _dbData.Certified_Grades);
-        }
-
-        [HttpGet]
-        public IActionResult AdminViewCG(int id)
-        {
-
-            Certified_Grades? cg = _dbData.Certified_Grades.FirstOrDefault(cg => cg.CG_ID == id);
-
-            if (cg != null)
-            {
-
-                return View(cg);
-
-            }
-            return NotFound();
-
-        }
-
-        [HttpGet]
-        public IActionResult AdminUpdateCGStatus(int id)
-        {
-            Certified_Grades? cgUpdatedStatus = _dbData.Certified_Grades.FirstOrDefault(cg => cg.CG_ID == id);
-
-            if (cgUpdatedStatus != null)
-                return View(cgUpdatedStatus);
-
-            return NotFound();
-        }
-
-        [HttpPost]
-        public IActionResult AdminUpdateCGStatus(Certified_Grades updatedCG)
-        {
-            Certified_Grades? cg = _dbData.Certified_Grades.FirstOrDefault(cg => cg.CG_ID == updatedCG.CG_ID);
-
-            if (!ModelState.IsValid)
-                return View();
-
-            if (updatedCG != null)
-            {
-
-                cg.CG_Status = updatedCG.CG_Status;
-
-                _dbData.SaveChanges();
-
-            }
-            return RedirectToAction("AdminCG", _dbData.Certified_Grades);
-
-        }
-
 
         [Authorize(Roles = "Scholar")]
         public IActionResult RF()
@@ -226,22 +166,20 @@ namespace ProjectSmart.Controllers
         }
 
         [HttpPost]
-        public IActionResult UploadRF(RequirementsModel newRFFile)
+        public IActionResult UploadRF(Registration_Form newRFFile)
         {
             if (!ModelState.IsValid)
                 return View();
 
-            Registration_Form? rf = _dbData.Registration_Form.FirstOrDefault(rf => rf.ScholarEmailAddress == newRFFile.ScholarEmailAddress);
-
             string folder = "ScholarshipRequirements/RegistrationForm/";
             string serverFolder = Path.Combine(_environment.WebRootPath, folder);
-            string uniqueFilename = User.Identity.Name + "_" + newRFFile.File.FileName;
+            string uniqueFilename = User.Identity.Name + "_" + newRFFile.RF_File.FileName;
             string filePath = Path.Combine(serverFolder, uniqueFilename);
 
             //Save the Photo within the specified File Path
             using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
-                newRFFile.File.CopyTo(fileStream);
+                newRFFile.RF_File.CopyTo(fileStream);
                 fileStream.Close();
                 fileStream.Dispose();
             }
@@ -250,15 +188,10 @@ namespace ProjectSmart.Controllers
             int secondYear = DateTime.Now.Year + 1;
             string year = "A.Y. " + firstYear.ToString() + " - " + secondYear.ToString();
 
-            rf.ScholarEmailAddress = newRFFile.ScholarEmailAddress;
-            rf.RF_Term = newRFFile.Term;
-            rf.RF_AcademicYear = year;
-            rf.RF_FileName = uniqueFilename;
-            rf.RF_FilePath = folder + uniqueFilename;
-            rf.RF_DateUploaded = newRFFile.DateUploaded;
-            rf.RF_Status = newRFFile.Status;
+            newRFFile.RF_AcademicYear = year;
+            newRFFile.RF_FilePath = folder + uniqueFilename;
 
-            _dbData.Registration_Form.Add(rf);
+            _dbData.Registration_Form.Add(newRFFile);
             _dbData.SaveChanges();
 
             return RedirectToAction("RF", _dbData.Registration_Form);
@@ -277,9 +210,9 @@ namespace ProjectSmart.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateRF(RequirementsModel updatedRF)
+        public IActionResult UpdateRF(Registration_Form updatedRF)
         {
-            Registration_Form? rf = _dbData.Registration_Form.FirstOrDefault(rf => rf.ScholarEmailAddress == updatedRF.ScholarEmailAddress);
+            Registration_Form? rf = _dbData.Registration_Form.FirstOrDefault(rf => rf.RF_ID == updatedRF.RF_ID);
 
             if (!ModelState.IsValid)
                 return View();
@@ -289,11 +222,11 @@ namespace ProjectSmart.Controllers
 
                 string folder = "ScholarshipRequirements/RegistrationForm/";
                 string serverFolder = Path.Combine(_environment.WebRootPath, folder);
-                string uniqueFilename = User.Identity.Name + "_" + updatedRF.File.FileName;
+                string uniqueFilename = User.Identity.Name + "_" + updatedRF.RF_File.FileName;
                 string filePath = Path.Combine(serverFolder, uniqueFilename);
 
-                string cgUrl = rf.RF_FilePath;
-                string oldPath = Path.Combine(_environment.WebRootPath, cgUrl);
+                string rfUrl = rf.RF_FilePath;
+                string oldPath = Path.Combine(_environment.WebRootPath, rfUrl);
                 if (System.IO.File.Exists(oldPath))
                 {
                     System.IO.File.Delete(oldPath);
@@ -303,13 +236,13 @@ namespace ProjectSmart.Controllers
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
 
-                    updatedRF.File.CopyTo(fileStream);
+                    updatedRF.RF_File.CopyTo(fileStream);
                     fileStream.Close();
                     fileStream.Dispose();
 
                 }
 
-                rf.RF_Term = updatedRF.Term;
+                rf.RF_Term = updatedRF.RF_Term;
                 rf.RF_FilePath = folder + uniqueFilename;
 
                 _dbData.SaveChanges();
@@ -348,22 +281,20 @@ namespace ProjectSmart.Controllers
         }
 
         [HttpPost]
-        public IActionResult UploadTR(RequirementsModel newTRFile)
+        public IActionResult UploadTR(Terminal_Report newTRFile)
         {
             if (!ModelState.IsValid)
                 return View();
 
-            Terminal_Report? tr = _dbData.Terminal_Report.FirstOrDefault(tr => tr.ScholarEmailAddress == newTRFile.ScholarEmailAddress);
-
             string folder = "ScholarshipRequirements/TerminalReportForm/";
             string serverFolder = Path.Combine(_environment.WebRootPath, folder);
-            string uniqueFilename = User.Identity.Name + "_" + newTRFile.File.FileName;
+            string uniqueFilename = User.Identity.Name + "_" + newTRFile.TR_File.FileName;
             string filePath = Path.Combine(serverFolder, uniqueFilename);
 
             //Save the Photo within the specified File Path
             using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
-                newTRFile.File.CopyTo(fileStream);
+                newTRFile.TR_File.CopyTo(fileStream);
                 fileStream.Close();
                 fileStream.Dispose();
             }
@@ -372,18 +303,13 @@ namespace ProjectSmart.Controllers
             int secondYear = DateTime.Now.Year + 1;
             string year = "A.Y. " + firstYear.ToString() + " - " + secondYear.ToString();
 
-            tr.ScholarEmailAddress = newTRFile.ScholarEmailAddress;
-            tr.TR_Term = newTRFile.Term;
-            tr.TR_AcademicYear = year;
-            tr.TR_FileName = uniqueFilename;
-            tr.TR_FilePath = folder + uniqueFilename;
-            tr.TR_DateUploaded = newTRFile.DateUploaded;
-            tr.TR_Status = newTRFile.Status;
+            newTRFile.TR_AcademicYear = year;
+            newTRFile.TR_FilePath = folder + uniqueFilename;
 
-            _dbData.Terminal_Report.Add(tr);
+            _dbData.Terminal_Report.Add(newTRFile);
             _dbData.SaveChanges();
 
-            return RedirectToAction("CGTR", _dbData.Terminal_Report);
+            return RedirectToAction("TR", _dbData.Terminal_Report);
 
         }
 
@@ -399,9 +325,9 @@ namespace ProjectSmart.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateTR(RequirementsModel updatedTR)
+        public IActionResult UpdateTR(Terminal_Report updatedTR)
         {
-            Terminal_Report? tr = _dbData.Terminal_Report.FirstOrDefault(tr => tr.ScholarEmailAddress == updatedTR.ScholarEmailAddress);
+            Terminal_Report? tr = _dbData.Terminal_Report.FirstOrDefault(tr => tr.TR_ID == updatedTR.TR_ID);
 
             if (!ModelState.IsValid)
                 return View();
@@ -411,11 +337,11 @@ namespace ProjectSmart.Controllers
 
                 string folder = "ScholarshipRequirements/TerminalReportForm/";
                 string serverFolder = Path.Combine(_environment.WebRootPath, folder);
-                string uniqueFilename = User.Identity.Name + "_" + updatedTR.File.FileName;
+                string uniqueFilename = User.Identity.Name + "_" + updatedTR.TR_File.FileName;
                 string filePath = Path.Combine(serverFolder, uniqueFilename);
 
-                string cgUrl = tr.TR_FilePath;
-                string oldPath = Path.Combine(_environment.WebRootPath, cgUrl);
+                string trUrl = tr.TR_FilePath;
+                string oldPath = Path.Combine(_environment.WebRootPath, trUrl);
                 if (System.IO.File.Exists(oldPath))
                 {
                     System.IO.File.Delete(oldPath);
@@ -425,13 +351,13 @@ namespace ProjectSmart.Controllers
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
 
-                    updatedTR.File.CopyTo(fileStream);
+                    updatedTR.TR_File.CopyTo(fileStream);
                     fileStream.Close();
                     fileStream.Dispose();
 
                 }
 
-                tr.TR_Term = updatedTR.Term;
+                tr.TR_Term = updatedTR.TR_Term;
                 tr.TR_FilePath = folder + uniqueFilename;
 
                 _dbData.SaveChanges();
@@ -470,22 +396,20 @@ namespace ProjectSmart.Controllers
         }
 
         [HttpPost]
-        public IActionResult UploadGL(RequirementsModel newGLFile)
+        public IActionResult UploadGL(Gratitude_Letter newGLFile)
         {
             if (!ModelState.IsValid)
                 return View();
 
-            Gratitude_Letter? gl = _dbData.Gratitude_Letter.FirstOrDefault(gl => gl.ScholarEmailAddress == newGLFile.ScholarEmailAddress);
-
             string folder = "ScholarshipRequirements/GratitudeLetter/";
             string serverFolder = Path.Combine(_environment.WebRootPath, folder);
-            string uniqueFilename = User.Identity.Name + "_" + newGLFile.File.FileName;
+            string uniqueFilename = User.Identity.Name + "_" + newGLFile.GL_File.FileName;
             string filePath = Path.Combine(serverFolder, uniqueFilename);
 
             //Save the Photo within the specified File Path
             using (var fileStream = new FileStream(filePath, FileMode.Create))
             {
-                newGLFile.File.CopyTo(fileStream);
+                newGLFile.GL_File.CopyTo(fileStream);
                 fileStream.Close();
                 fileStream.Dispose();
             }
@@ -494,15 +418,10 @@ namespace ProjectSmart.Controllers
             int secondYear = DateTime.Now.Year + 1;
             string year = "A.Y. " + firstYear.ToString() + " - " + secondYear.ToString();
 
-            gl.ScholarEmailAddress = newGLFile.ScholarEmailAddress;
-            gl.GL_Term = newGLFile.Term;
-            gl.GL_AcademicYear = year;
-            gl.GL_FileName = uniqueFilename;
-            gl.GL_FilePath = folder + uniqueFilename;
-            gl.GL_DateUploaded = newGLFile.DateUploaded;
-            gl.GL_Status = newGLFile.Status;
+            newGLFile.GL_AcademicYear = year;
+            newGLFile.GL_FilePath = folder + uniqueFilename;
 
-            _dbData.Gratitude_Letter.Add(gl);
+            _dbData.Gratitude_Letter.Add(newGLFile);
             _dbData.SaveChanges();
 
             return RedirectToAction("GL", _dbData.Gratitude_Letter);
@@ -521,9 +440,9 @@ namespace ProjectSmart.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateGL(RequirementsModel updatedGL)
+        public IActionResult UpdateGL(Gratitude_Letter updatedGL)
         {
-            Gratitude_Letter? gl = _dbData.Gratitude_Letter.FirstOrDefault(gl => gl.ScholarEmailAddress == updatedGL.ScholarEmailAddress);
+            Gratitude_Letter? gl = _dbData.Gratitude_Letter.FirstOrDefault(gl => gl.GL_ID == updatedGL.GL_ID);
 
             if (!ModelState.IsValid)
                 return View();
@@ -533,11 +452,11 @@ namespace ProjectSmart.Controllers
 
                 string folder = "ScholarshipRequirements/GratitudeLetter/";
                 string serverFolder = Path.Combine(_environment.WebRootPath, folder);
-                string uniqueFilename = User.Identity.Name + "_" + updatedGL.File.FileName;
+                string uniqueFilename = User.Identity.Name + "_" + updatedGL.GL_File.FileName;
                 string filePath = Path.Combine(serverFolder, uniqueFilename);
 
-                string cgUrl = gl.GL_FilePath;
-                string oldPath = Path.Combine(_environment.WebRootPath, cgUrl);
+                string glUrl = gl.GL_FilePath;
+                string oldPath = Path.Combine(_environment.WebRootPath, glUrl);
                 if (System.IO.File.Exists(oldPath))
                 {
                     System.IO.File.Delete(oldPath);
@@ -547,13 +466,13 @@ namespace ProjectSmart.Controllers
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
 
-                    updatedGL.File.CopyTo(fileStream);
+                    updatedGL.GL_File.CopyTo(fileStream);
                     fileStream.Close();
                     fileStream.Dispose();
 
                 }
 
-                gl.GL_Term = updatedGL.Term;
+                gl.GL_Term = updatedGL.GL_Term;
                 gl.GL_FilePath = folder + uniqueFilename;
 
                 _dbData.SaveChanges();
