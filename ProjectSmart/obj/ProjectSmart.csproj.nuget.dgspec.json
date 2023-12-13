@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Wepp\\Source\\Repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\ProjectSmart.csproj": {}
+    "C:\\Users\\Wepp\\source\\repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\ProjectSmart.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Wepp\\Source\\Repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\ProjectSmart.csproj": {
+    "C:\\Users\\Wepp\\source\\repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\ProjectSmart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wepp\\Source\\Repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\ProjectSmart.csproj",
+        "projectUniqueName": "C:\\Users\\Wepp\\source\\repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\ProjectSmart.csproj",
         "projectName": "ProjectSmart",
-        "projectPath": "C:\\Users\\Wepp\\Source\\Repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\ProjectSmart.csproj",
+        "projectPath": "C:\\Users\\Wepp\\source\\repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\ProjectSmart.csproj",
         "packagesPath": "C:\\Users\\Wepp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wepp\\Source\\Repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\obj\\",
+        "outputPath": "C:\\Users\\Wepp\\source\\repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

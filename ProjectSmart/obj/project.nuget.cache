@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MT4IoSI9rA+10fPlu5WirIR6gkPzbRnoNrwtpi9+YiJ/pxI3AJzmJjAiBSxDmchon1bSXCpF/avS2ea6cSr/+w==",
+  "dgSpecHash": "TQOGL9mMPjLKpjzofWXqJ6CEnRLx61CP21qcD3+wOUsSrOYjt4aOgVZ7xonjO0Ac3c2uqe+AuYIFav/vt3brTQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Wepp\\Source\\Repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\ProjectSmart.csproj",
+  "projectFilePath": "C:\\Users\\Wepp\\source\\repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\ProjectSmart.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Wepp\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Wepp\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
