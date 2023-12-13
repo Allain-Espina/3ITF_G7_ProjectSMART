@@ -24,7 +24,7 @@ namespace ProjectSmart.Controllers
             _dbData = dbData;
         }
 
-        [Authorize]
+        //[Authorize]
         public IActionResult Index()
         {
             var loggedUser = User.Identity.GetUserName();

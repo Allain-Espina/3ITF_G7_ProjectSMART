@@ -1,0 +1,76 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model AdminUpdateAccountModel
+
+@{
+    ViewData["Title"] = "Update Admin Account";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" asp-action="AdminAccountUpdate" asp-controller="Settings">
+    <div class="form-group">
+        <label asp-for="AdminFirstName">First Name</label>
+        <input asp-for="AdminFirstName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AdminMiddleName">Middle Name</label>
+        <input asp-for="AdminMiddleName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AdminLastName">Last Name</label>
+        <input asp-for="AdminLastName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AdminEmail">Email Address</label>
+        <input asp-for="AdminEmail" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AdminContactNumber">Contact Number</label>
+        <input asp-for="AdminContactNumber" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AdminDateOfBirth">Date of Birth</label>
+        <input asp-for="AdminDateOfBirth" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AdminAddress1">Address Line 1</label>
+        <input asp-for="AdminAddress1" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AdminAddress2">Address Line 2</label>
+        <input asp-for="AdminAddress2" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AdminCity">City</label>
+        <input asp-for="AdminCity" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AdminRegion">Region</label>
+        <input asp-for="AdminRegion" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AdminPosition">Position</label>
+        <input asp-for="AdminPosition" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AdminBranch">Branch</label>
+        <input asp-for="AdminBranch" class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Update Account</button>
+</form>
+
+

@@ -54,7 +54,10 @@ app.UseSession();
 
 var context = app.Services.CreateScope().ServiceProvider.GetRequiredService<AppDbContext>();
 context.Database.EnsureCreated();
-/*context.Database.EnsureDeleted();*/
+//context.Database.EnsureDeleted();
+
+
+
 
 app.MapControllerRoute(
     name: "default",
@@ -102,11 +105,11 @@ using (var scope = app.Services.CreateScope())
             }
         }
     }
-    catch(Exception ex)
+    catch (Exception ex)
     {
         Console.WriteLine(ex);
     }
-    
+
 
 }
 

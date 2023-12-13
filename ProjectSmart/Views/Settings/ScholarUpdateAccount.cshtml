@@ -1,0 +1,81 @@
+﻿@model ProjectSmart.ViewModels.ScholarUpdateAccountModel
+
+@{
+    ViewData["Title"] = "Update Scholar Account";
+}
+
+<h1>Scholar Update Account</h1>
+
+<div>
+    <form method="post" asp-action="ScholarUpdateAccount" asp-controller="Settings">
+
+        <div class="form-group">
+            <label asp-for="ScholarFirstName">First Name</label>
+            <input asp-for="ScholarFirstName" class="form-control" value="@Model.ScholarFirstName" required>
+            <span asp-validation-for="ScholarFirstName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ScholarMiddleName">Middle Name</label>
+            <input asp-for="ScholarMiddleName" class="form-control" value="@Model.ScholarMiddleName">
+            <span asp-validation-for="ScholarMiddleName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ScholarLastName">Last Name</label>
+            <input asp-for="ScholarLastName" class="form-control" value="@Model.ScholarLastName" required>
+            <span asp-validation-for="ScholarLastName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ScholarEmail">Email</label>
+            <input asp-for="ScholarEmail" type="email" class="form-control" value="@Model.ScholarEmail" required>
+            <span asp-validation-for="ScholarEmail" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ScholarContactNumber">Contact Number</label>
+            <input asp-for="ScholarContactNumber" class="form-control" value="@Model.ScholarContactNumber" required>
+            <span asp-validation-for="ScholarContactNumber" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ScholarDateOfBirth">Date of Birth</label>
+            <input asp-for="ScholarDateOfBirth" class="form-control" required>
+            <span asp-validation-for="ScholarDateOfBirth" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="ScholarUniversity">University</label>
+            <input asp-for="ScholarUniversity" class="form-control" value="@Model.ScholarUniversity" required>
+            <span asp-validation-for="ScholarUniversity" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ScholarAddress1">Address Line 1</label>
+            <input asp-for="ScholarAddress1" class="form-control" value="@Model.ScholarAddress1" required>
+            <span asp-validation-for="ScholarAddress1" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ScholarAddress2">Address Line 2</label>
+            <input asp-for="ScholarAddress2" class="form-control" value="@Model.ScholarAddress2">
+            <span asp-validation-for="ScholarAddress2" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ScholarCity">City</label>
+            <input asp-for="ScholarCity" class="form-control" value="@Model.ScholarCity" required>
+            <span asp-validation-for="ScholarCity" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ScholarRegion">Region</label>
+            <input asp-for="ScholarRegion" class="form-control" value="@Model.ScholarRegion" required>
+            <span asp-validation-for="ScholarRegion" class="text-danger"></span>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Update Account</button>
+    </form>
+</div>

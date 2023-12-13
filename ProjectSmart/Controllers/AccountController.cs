@@ -1,26 +1,23 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using ProjectSmart.Data;
 using ProjectSmart.Models;
 using ProjectSmart.ViewModels;
-using System.Data;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Threading.Tasks;
 
 namespace ProjectSmart.Controllers
 {
     public class AccountController : Controller
     {
         private readonly SignInManager<User> _signInManager;
-        private readonly Microsoft.AspNetCore.Identity.UserManager<User> _userManager;
+        private readonly UserManager<User> _userManager;
         private readonly AppDbContext _dbData;
 
-        public AccountController(SignInManager<User> SignInManager, Microsoft.AspNetCore.Identity.UserManager<User> UserManager, AppDbContext dbData)
+        public AccountController(SignInManager<User> signInManager, UserManager<User> userManager, AppDbContext dbData)
         {
-            _signInManager = SignInManager;
-            _userManager = UserManager;
+            _signInManager = signInManager;
+            _userManager = userManager;
             _dbData = dbData;
         }
 
@@ -66,12 +63,89 @@ namespace ProjectSmart.Controllers
             return View(adminLoginInfo);
         }
 
+        [HttpGet]
+        public IActionResult ScholarRegister()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ScholarRegister(ScholarRegisterModel scholarRegisterInfo)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            var user = new User
+            {
+                UserName = scholarRegisterInfo.Email,
+                Email = scholarRegisterInfo.Email,
+                FirstName = scholarRegisterInfo.FirstName,
+                MiddleName = scholarRegisterInfo.MiddleName,
+                LastName = scholarRegisterInfo.LastName,
+                Role = "Scholar"
+            };
+
+            var result = await _userManager.CreateAsync(user, scholarRegisterInfo.Password);
+
+            if (result.Succeeded)
+            {
+                await _signInManager.SignInAsync(user, isPersistent: false);
+                return RedirectToAction("Index", "Home");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+
+            return View(scholarRegisterInfo);
+        }
+
+        [HttpGet]
+        public IActionResult AdminRegister()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AdminRegister(AdminRegisterModel adminRegisterInfo)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            var user = new User
+            {
+                UserName = adminRegisterInfo.Email,
+                Email = adminRegisterInfo.Email,
+                FirstName = adminRegisterInfo.FirstName,
+                MiddleName = adminRegisterInfo.MiddleName,
+                LastName = adminRegisterInfo.LastName,
+                Role = "Admin"
+            };
+
+            var result = await _userManager.CreateAsync(user, adminRegisterInfo.Password);
+
+            if (result.Succeeded)
+            {
+                await _userManager.AddToRoleAsync(user, "Admin");
+                await _signInManager.SignInAsync(user, isPersistent: false);
+                return RedirectToAction("Index", "Home");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+
+            return View(adminRegisterInfo);
+        }
+
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("ScholarLogin", "Account");
         }
 
-    }
 
+    }
 }

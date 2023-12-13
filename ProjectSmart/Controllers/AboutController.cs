@@ -5,7 +5,7 @@ namespace ProjectSmart.Controllers
 {
     public class AboutController : Controller
     {
-        [Authorize(Roles = "Scholar")]
+        //[Authorize(Roles = "Scholar")]
         public IActionResult Index()
         {
             return View();
