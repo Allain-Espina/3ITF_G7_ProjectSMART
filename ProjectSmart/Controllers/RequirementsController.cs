@@ -81,7 +81,7 @@ namespace ProjectSmart.Controllers
             _dbData.Certified_Grades.Add(newCGFile);
             _dbData.SaveChanges();
 
-            return RedirectToAction("CG", _dbData.Certified_Grades);
+            return RedirectToAction("CG", _dbData.Certified_Grades.Where(cg => cg.ScholarEmailAddress == User.Identity.Name));
 
         }
 
@@ -136,7 +136,7 @@ namespace ProjectSmart.Controllers
                 _dbData.SaveChanges();
 
             }
-            return RedirectToAction("CG", _dbData.Certified_Grades);
+            return RedirectToAction("CG", _dbData.Certified_Grades.Where(cg => cg.ScholarEmailAddress == User.Identity.Name));
 
         }
 
@@ -249,7 +249,7 @@ namespace ProjectSmart.Controllers
             _dbData.Registration_Form.Add(newRFFile);
             _dbData.SaveChanges();
 
-            return RedirectToAction("RF", _dbData.Registration_Form);
+            return RedirectToAction("RF", _dbData.Registration_Form.Where(rf => rf.ScholarEmailAddress == User.Identity.Name));
 
         }
 
@@ -304,7 +304,7 @@ namespace ProjectSmart.Controllers
                 _dbData.SaveChanges();
 
             }
-            return RedirectToAction("RF", _dbData.Registration_Form);
+            return RedirectToAction("RF", _dbData.Registration_Form.Where(rf => rf.ScholarEmailAddress == User.Identity.Name));
 
         }
 
@@ -416,7 +416,7 @@ namespace ProjectSmart.Controllers
             _dbData.Terminal_Report.Add(newTRFile);
             _dbData.SaveChanges();
 
-            return RedirectToAction("TR", _dbData.Terminal_Report);
+            return RedirectToAction("TR", _dbData.Terminal_Report.Where(tr => tr.ScholarEmailAddress == User.Identity.Name));
 
         }
 
@@ -471,7 +471,7 @@ namespace ProjectSmart.Controllers
                 _dbData.SaveChanges();
 
             }
-            return RedirectToAction("TR", _dbData.Terminal_Report);
+            return RedirectToAction("TR", _dbData.Terminal_Report.Where(tr => tr.ScholarEmailAddress == User.Identity.Name));
 
         }
 
@@ -584,7 +584,7 @@ namespace ProjectSmart.Controllers
             _dbData.Gratitude_Letter.Add(newGLFile);
             _dbData.SaveChanges();
 
-            return RedirectToAction("GL", _dbData.Gratitude_Letter);
+            return RedirectToAction("GL", _dbData.Gratitude_Letter.Where(gl => gl.ScholarEmailAddress == User.Identity.Name));
 
         }
 
@@ -639,7 +639,7 @@ namespace ProjectSmart.Controllers
                 _dbData.SaveChanges();
 
             }
-            return RedirectToAction("GL", _dbData.Gratitude_Letter);
+            return RedirectToAction("GL", _dbData.Gratitude_Letter.Where(gl => gl.ScholarEmailAddress == User.Identity.Name));
 
         }
 
