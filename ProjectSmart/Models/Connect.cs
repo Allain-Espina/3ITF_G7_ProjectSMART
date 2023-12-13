@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Net.NetworkInformation;
 
 namespace ProjectSmart.Models
 {
@@ -19,6 +20,12 @@ namespace ProjectSmart.Models
         [Required]
         [Display(Name = "Comment")]
         public string ConnectContent { get; set; }
-        public DateTime CurrentTime { get { return _date; } set { _date = value; } }
+        public DateTime CurrentTime
+        {
+            get { return _date; }
+            set { _date = value; }
+        }
+        public virtual ICollection<Reply>? Replies { get; set; }
+
     }
 }

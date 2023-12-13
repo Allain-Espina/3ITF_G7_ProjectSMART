@@ -14,7 +14,7 @@ namespace ProjectSmart.Data
         public DbSet<Terminal_Report> Terminal_Report { get; set; }
         public DbSet<Gratitude_Letter> Gratitude_Letter { get; set; }
         public DbSet<Connect> Connects { get; set; }
-
+        public DbSet<Reply> Replies { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

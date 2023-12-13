@@ -1,0 +1,25 @@
+﻿@{
+}
+
+@model Reply;
+
+<h1 id="titles" class="d-flex justify-content-start mt-2 pt-2 ms-5 ps-5">REPLY</h1>
+
+<hr>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+<form asp-action="AddReply" asp-controller="Connect" method="post">
+    <input type="hidden" asp-for="ConnectId"/>
+    <label asp-for="ScholarEmailAddress" hidden></label>
+    <input class="form-control" asp-for="ScholarEmailAddress" value="@User.Identity.Name" readonly hidden>
+    <div class="card container-fluid pt-2 w-50">
+        <div class="form-group pt-2">
+            <label asp-for="ReplyContent" class="pb-2">Reply</label>
+            <input class="form-control mb-3" asp-for="ReplyContent" autocomplete="off">
+        </div>
+        <div class="float-end mb-3">
+            <button type="submit" class="btn btn-primary btn-sm">Post Reply</button>
+            <button type="button" class="btn btn-danger btn-sm" onclick="history.back()">Cancel</button>
+        </div>
+    </div>
+</form>

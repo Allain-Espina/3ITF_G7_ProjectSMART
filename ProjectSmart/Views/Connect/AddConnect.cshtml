@@ -1,4 +1,5 @@
 ﻿@{
+
 }
 
 @model Connect;
@@ -13,7 +14,7 @@
         <div class="form-group pt-2">
             <label asp-for="ScholarEmailAddress" hidden></label>
             <input class="form-control" asp-for="ScholarEmailAddress" value="@User.Identity.Name" readonly hidden>
-            <label asp-for="ConnectTag">Subject</label>
+            <label asp-for="ConnectTag">Type</label>
             <select class="form-control" asp-for="ConnectTag" asp-items="@Html.GetEnumSelectList(typeof(Tag))"></select>
         </div>
         <div class="form-group pt-2">
@@ -22,6 +23,7 @@
         </div>
         <div class="float-end mb-3">
             <button type="submit" class="btn btn-primary btn-sm">Post Comment</button>
+            <button type="button" class="btn btn-danger btn-sm" onclick="history.back()">Cancel</button>
         </div>
     </div>
 </form>
