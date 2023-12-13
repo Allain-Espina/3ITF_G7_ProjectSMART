@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "fmnq4h3lRiphXflyI3iyETDMo+CYUweYki4Mt1QyU54=",
+=======
+  "Hash": "Kh2NnQxP7fNl6A3ZYkO1FeSl4O5GTyg5tPs66w+FJik=",
+>>>>>>> 87262e40ac3647f5dc596a25960f7aaafbe5f2de
   "Source": "ProjectSmart",
   "BasePath": "_content/ProjectSmart",
   "Mode": "Default",
@@ -2091,10 +2095,17 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\SANDRA\\source\\repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\wwwroot\\ScholarshipRequirements\\CertifiedTrueCopyOfGrades\\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW1 - ESPINA, ALLAIN DANIEL - 3ITF.pdf",
       "SourceId": "ProjectSmart",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\SANDRA\\source\\repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\ScholarshipRequirements\\CertifiedTrueCopyOfGrades\\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW1 - ESPINA, ALLAIN DANIEL - 3ITF.pdf",
+      "SourceId": "ProjectSmart",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\",
+>>>>>>> 87262e40ac3647f5dc596a25960f7aaafbe5f2de
       "BasePath": "_content/ProjectSmart",
       "RelativePath": "ScholarshipRequirements/CertifiedTrueCopyOfGrades/allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW1 - ESPINA, ALLAIN DANIEL - 3ITF.pdf",
       "AssetKind": "All",
@@ -2108,10 +2119,17 @@
       "OriginalItemSpec": "wwwroot\\ScholarshipRequirements\\CertifiedTrueCopyOfGrades\\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW1 - ESPINA, ALLAIN DANIEL - 3ITF.pdf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\SANDRA\\source\\repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\wwwroot\\ScholarshipRequirements\\GratitudeLetter\\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - FIN - HW1 - ESPINA, ALLAIN DANIEL - 3ITF.pdf",
       "SourceId": "ProjectSmart",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\SANDRA\\source\\repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\ScholarshipRequirements\\GratitudeLetter\\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - FIN - HW1 - ESPINA, ALLAIN DANIEL - 3ITF.pdf",
+      "SourceId": "ProjectSmart",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\",
+>>>>>>> 87262e40ac3647f5dc596a25960f7aaafbe5f2de
       "BasePath": "_content/ProjectSmart",
       "RelativePath": "ScholarshipRequirements/GratitudeLetter/allaindaniel.espina.cics@ust.edu.ph_ICS26012 - FIN - HW1 - ESPINA, ALLAIN DANIEL - 3ITF.pdf",
       "AssetKind": "All",
@@ -2125,10 +2143,17 @@
       "OriginalItemSpec": "wwwroot\\ScholarshipRequirements\\GratitudeLetter\\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - FIN - HW1 - ESPINA, ALLAIN DANIEL - 3ITF.pdf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\SANDRA\\source\\repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\wwwroot\\ScholarshipRequirements\\RegistrationForm\\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW2 - ESPINA, ALLAIN DANIEL - 3ITF.pdf",
       "SourceId": "ProjectSmart",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\SANDRA\\source\\repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\ScholarshipRequirements\\RegistrationForm\\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW2 - ESPINA, ALLAIN DANIEL - 3ITF.pdf",
+      "SourceId": "ProjectSmart",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\",
+>>>>>>> 87262e40ac3647f5dc596a25960f7aaafbe5f2de
       "BasePath": "_content/ProjectSmart",
       "RelativePath": "ScholarshipRequirements/RegistrationForm/allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW2 - ESPINA, ALLAIN DANIEL - 3ITF.pdf",
       "AssetKind": "All",
@@ -2142,10 +2167,17 @@
       "OriginalItemSpec": "wwwroot\\ScholarshipRequirements\\RegistrationForm\\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW2 - ESPINA, ALLAIN DANIEL - 3ITF.pdf"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\SANDRA\\source\\repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\wwwroot\\ScholarshipRequirements\\TerminalReportForm\\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW3 - ESPINA, ALLAIN DANIEL - 3ITF.pdf",
       "SourceId": "ProjectSmart",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\SANDRA\\source\\repos\\3ITF_G7_ProjectSMART\\ProjectSmart\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\ScholarshipRequirements\\TerminalReportForm\\allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW3 - ESPINA, ALLAIN DANIEL - 3ITF.pdf",
+      "SourceId": "ProjectSmart",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Acer\\source\\repos\\Group7_ProjectSmart\\ProjectSmart\\wwwroot\\",
+>>>>>>> 87262e40ac3647f5dc596a25960f7aaafbe5f2de
       "BasePath": "_content/ProjectSmart",
       "RelativePath": "ScholarshipRequirements/TerminalReportForm/allaindaniel.espina.cics@ust.edu.ph_ICS26012 - HW3 - ESPINA, ALLAIN DANIEL - 3ITF.pdf",
       "AssetKind": "All",
