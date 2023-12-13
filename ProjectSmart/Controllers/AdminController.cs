@@ -128,12 +128,10 @@ namespace ProjectSmart.Controllers
 
             if (scholarChanges != null)
             {
-                scholar.ScholarEmail = scholarChanges.ScholarEmail;
                 scholar.ScholarFirstName = scholarChanges.ScholarFirstName;
                 scholar.ScholarMiddleName = scholarChanges.ScholarMiddleName;
                 scholar.ScholarLastName = scholarChanges.ScholarLastName;
                 scholar.ScholarContactNumber = scholarChanges.ScholarContactNumber;
-                scholar.ScholarDateOfBirth = scholarChanges.ScholarDateOfBirth;
                 scholar.ScholarUniversity = scholarChanges.ScholarUniversity;
                 scholar.ScholarAddress1 = scholarChanges.ScholarAddress1;
                 scholar.ScholarAddress2 = scholarChanges.ScholarAddress2;
@@ -326,12 +324,10 @@ namespace ProjectSmart.Controllers
 
             if (adminChanges != null)
             {
-                admin.AdminEmail = adminChanges.AdminEmail;
                 admin.AdminFirstName = adminChanges.AdminFirstName;
                 admin.AdminMiddleName = adminChanges.AdminMiddleName;
                 admin.AdminLastName = adminChanges.AdminLastName;
                 admin.AdminContactNumber = adminChanges.AdminContactNumber;
-                admin.AdminDateOfBirth = adminChanges.AdminDateOfBirth;
                 admin.AdminAddress1 = adminChanges.AdminAddress1;
                 admin.AdminAddress2 = adminChanges.AdminAddress2;
                 admin.AdminCity = adminChanges.AdminCity;

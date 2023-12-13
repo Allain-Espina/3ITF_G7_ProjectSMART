@@ -3,11 +3,6 @@
 *@
 @{
 }
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
 
 @model ScholarUsers
 
@@ -46,11 +41,12 @@
         <input asp-for="ScholarContactNumber">
     </div>
     <br />
+    
     <div class="form-group">
-        <label asp-for="ScholarDateOfBirth"></label>
-        <input asp-for="ScholarDateOfBirth">
+        <label asp-for="ScholarDateOfBirth" hidden></label>
+        <input asp-for="ScholarDateOfBirth" value="2000-01-01" hidden readonly />
     </div>
-    <br />
+
     <div class="form-group">
         <label asp-for="ScholarUniversity"></label>
         <input asp-for="ScholarUniversity">

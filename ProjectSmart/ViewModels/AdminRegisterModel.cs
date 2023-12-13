@@ -38,7 +38,7 @@ namespace ProjectSmart.ViewModels
 
         [DataType(DataType.Date)]
         [Display(Name = "Date of Birth")]
-        [Required(ErrorMessage = "Please provide the Administrator's birth date.")]
+        [Required(ErrorMessage = "Please provide the Administrator's Date of Birth.")]
         public DateTime DateOfBirth { get; set; }
 
         [Display(Name = "Address Line 1:")]

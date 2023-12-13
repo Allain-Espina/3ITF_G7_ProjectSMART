@@ -35,7 +35,7 @@ namespace ProjectSmart.Models
 
         [DataType(DataType.Date)]
         [Display(Name = "Date of Birth")]
-        [Required(ErrorMessage = "Please provide the Scholar's birth date.")]
+        //[Required(ErrorMessage = "Please provide the Scholar's Date of Birth.")]
         public string ScholarDateOfBirth { get; set; }
 
         [Display(Name = "University:")]

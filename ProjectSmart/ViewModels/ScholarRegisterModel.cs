@@ -38,7 +38,6 @@ namespace ProjectSmart.ViewModels
 
         [DataType(DataType.Date)]
         [Display(Name = "Date of Birth")]
-        [Required(ErrorMessage = "Please provide the Scholar's birth date.")]
         public DateTime DateOfBirth {  get; set; }
 
         [Display(Name = "University:")]

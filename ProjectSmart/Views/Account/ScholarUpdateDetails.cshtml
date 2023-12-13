@@ -1,0 +1,77 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model ScholarUsers
+
+<h1>Update your Account Details</h1>
+
+<div class="btn-danger" asp-validation-summary="All"></div>
+
+<form asp-action="ScholarUpdateDetails" asp-controller="Account">
+    <div class="form-group">
+        <label asp-for="ScholarId"></label>
+        <input readonly asp-for="ScholarId">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarEmail"></label>
+        <input readonly asp-for="ScholarEmail">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarFirstName"></label>
+        <input asp-for="ScholarFirstName">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarMiddleName"></label>
+        <input asp-for="ScholarMiddleName">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarLastName"></label>
+        <input asp-for="ScholarLastName">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarContactNumber"></label>
+        <input asp-for="ScholarContactNumber">
+    </div>
+    <br />
+
+    <div class="form-group">
+        <label asp-for="ScholarDateOfBirth" hidden></label>
+        <input asp-for="ScholarDateOfBirth" value="2000-01-01" hidden readonly/>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ScholarUniversity"></label>
+        <input asp-for="ScholarUniversity">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarAddress1"></label>
+        <input asp-for="ScholarAddress1">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarAddress2"></label>
+        <input asp-for="ScholarAddress2">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarCity"></label>
+        <input asp-for="ScholarCity">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarRegion"></label>
+        <input asp-for="ScholarRegion">
+    </div>
+    <br />
+    <input type="submit" class="btn btn-primary" value="Submit">
+    <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
+</form>

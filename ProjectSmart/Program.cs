@@ -94,7 +94,9 @@ using (var scope = app.Services.CreateScope())
                 PhoneNumber = "0912-345-6789"
             };
 
-            var result = userManager.CreateAsync(adminUser, "Admin12!").Result;
+            var password = "Admin12!";
+
+            var result = userManager.CreateAsync(adminUser,password).Result;
 
             if (result.Succeeded)
             {

@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model IEnumerable<ProjectSmart.Models.AdminUsers>;
+
+<h1 id="titles" class="d-flex justify-content-start mt-2 pt-2 ms-5 ps-5">Administrator's Details</h1>
+
+<br />
+
+<table class="table table-hover table-sm">
+    <tr>
+        <th>Email Address</th>
+        <th>First Name</th>
+        <th>Middle Name</th>
+        <th>Last Name</th>
+        <th>Contact Number</th>
+    </tr>
+</table>
+
+@foreach (var aa in Model)
+{
+    <table>
+        <tr>
+            <td>@aa.AdminEmail</td>
+            <td>@aa.AdminFirstName</td>
+            <td>@aa.AdminMiddleName</td>
+            <td>@aa.AdminLastName</td>
+            <td>@aa.AdminContactNumber</td>
+        </tr>
+    </table>
+
+    <a style="color: white;" class="btn btn-primary" asp-action="AdminViewDetails" asp-route-id="@aa.AdminId">View Full Details</a>
+    <a style="color: white;" class="btn btn-primary" asp-action="AdminUpdateDetails" asp-route-id="@aa.AdminId">Update Administrator Details</a>
+    <a style="color: white;" class="btn btn-primary" asp-action="AdminUpdatePassword" asp-route-id="@aa.AdminId">Update Account Password</a>
+
+}
+
+
