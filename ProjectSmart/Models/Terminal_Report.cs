@@ -19,7 +19,6 @@ namespace ProjectSmart.Models
 
         public string? TR_FileName { get; set; }
 
-        [FileExtensions(Extensions = "pdf", ErrorMessage = "Please upload your Terminal Report Form in PDF Format.")]
         [Display(Name = "Terminal Report Form:")]
         [NotMapped]
         public IFormFile? TR_File { get; set; }

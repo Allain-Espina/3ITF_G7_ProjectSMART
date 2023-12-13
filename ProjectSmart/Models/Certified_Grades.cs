@@ -26,7 +26,6 @@ namespace ProjectSmart.Models
 
         public string? CG_FileName { get; set; }
 
-        [FileExtensions(Extensions = "pdf", ErrorMessage = "Please upload your Certified True Copy of Grades in PDF Format.")]
         [Display(Name = "Certified True Copy of Grades")]
         [NotMapped]
         public IFormFile? CG_File { get; set; }

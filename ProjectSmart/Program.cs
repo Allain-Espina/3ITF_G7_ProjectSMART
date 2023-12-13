@@ -54,10 +54,7 @@ app.UseSession();
 
 var context = app.Services.CreateScope().ServiceProvider.GetRequiredService<AppDbContext>();
 context.Database.EnsureCreated();
-//context.Database.EnsureDeleted();
-
-
-
+/*context.Database.EnsureDeleted();*/
 
 app.MapControllerRoute(
     name: "default",

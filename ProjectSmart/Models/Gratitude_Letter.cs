@@ -19,7 +19,6 @@ namespace ProjectSmart.Models
 
         public string? GL_FileName { get; set; }
 
-        [FileExtensions(Extensions = "pdf", ErrorMessage = "Please upload your Gratitude Letter in PDF Format.")]
         [Display(Name = "Gratitude Letter:")]
         [NotMapped]
         public IFormFile? GL_File { get; set; }

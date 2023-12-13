@@ -19,7 +19,6 @@ namespace ProjectSmart.Models
 
         public string? RF_FileName { get; set; }
 
-        [FileExtensions(Extensions = "pdf", ErrorMessage = "Please upload your Registration Form in PDF Format.")]
         [Display(Name = "Registration Form:")]
         [NotMapped]
         public IFormFile? RF_File { get; set; }

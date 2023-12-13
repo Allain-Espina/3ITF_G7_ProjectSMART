@@ -7,6 +7,7 @@ namespace ProjectSmart.ViewModels
 
         [Display(Name = "Administrator's Email Address:")]
         [Required(ErrorMessage = "Email Address is required.")]
+        [DataType(DataType.EmailAddress)]
         public string? Email { get; set; }
 
         [Display(Name = "Administrator's Password:")]

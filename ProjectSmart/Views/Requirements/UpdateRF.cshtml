@@ -9,7 +9,11 @@
 <div class="btn-danger" asp-validation-summary="All"></div>
 
 <form asp-controller="Requirements" asp-action="UpdateRF" method="post" enctype="multipart/form-data">
+    
     <div class="form-group">
+        <input class="form-control" asp-for="RF_ID" hidden readonly>
+    </div>
+    <br /><div class="form-group">
         <label asp-for="ScholarEmailAddress">Student Name</label>
         <input class="form-control" asp-for="ScholarEmailAddress" readonly>
     </div>
@@ -27,7 +31,7 @@
     <br />
     <div class="form-group">
         <label asp-for="RF_File"></label>
-        <input asp-for="RF_File" class="form-control">
+        <input asp-for="RF_File" class="form-control" accept="application/pdf" required>
     </div>
     <br />
     <button type="submit" class="btn btn-primary">Submit</button>
