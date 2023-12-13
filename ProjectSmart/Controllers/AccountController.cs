@@ -1,14 +1,11 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using ProjectSmart.Data;
 using ProjectSmart.Models;
 using ProjectSmart.ViewModels;
-using System.Data;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Threading.Tasks;
 
 namespace ProjectSmart.Controllers
 {
@@ -18,10 +15,10 @@ namespace ProjectSmart.Controllers
         private readonly Microsoft.AspNetCore.Identity.UserManager<User> _userManager;
         private readonly AppDbContext _dbData;
 
-        public AccountController(SignInManager<User> SignInManager, Microsoft.AspNetCore.Identity.UserManager<User> UserManager, AppDbContext dbData)
+        public AccountController(SignInManager<User> signInManager, Microsoft.AspNetCore.Identity.UserManager<User> userManager, AppDbContext dbData)
         {
-            _signInManager = SignInManager;
-            _userManager = UserManager;
+            _signInManager = signInManager;
+            _userManager = userManager;
             _dbData = dbData;
         }
 
@@ -318,6 +315,6 @@ namespace ProjectSmart.Controllers
             return RedirectToAction("ScholarLogin", "Account");
         }
 
-    }
 
+    }
 }

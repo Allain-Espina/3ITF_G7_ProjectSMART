@@ -7,19 +7,21 @@
 @model ScholarLoginModel
 
 <h1>Scholar's Login</h1>
+<div>
+    <div class="btn-danger" asp-validation-summary="All"></div>
 
-<div class="btn-danger" asp-validation-summary="All"></div>
+    <form asp-action="ScholarLogin" asp-controller="Account">
+        <div class="form-group">
+            <label asp-for="Email"></label>
+            <input asp-for="Email">
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="Password"></label>
+            <input asp-for="Password">
+        </div>
+        <br />
 
-<form asp-action="ScholarLogin" asp-controller="Account">
-    <div class="form-group">
-        <label asp-for="Email"></label>
-        <input asp-for="Email">
-    </div>
-    <br />
-    <div class="form-group">
-        <label asp-for="Password"></label>
-        <input asp-for="Password">
-    </div>
-    <br />
-    <input type="submit" class="btn btn-primary" value="Submit">
-</form>
+        <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+</div>
