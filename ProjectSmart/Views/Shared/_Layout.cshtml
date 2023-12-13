@@ -27,13 +27,68 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-center justify-content-between">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5 pe-5">
 
+                        <li class="nav-item">
+                            <a class="w3-bar-item w3-button" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="w3-bar-item w3-button" asp-area="" asp-controller="Scholarship" asp-action="Index">Scholarship</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="w3-bar-item w3-button" asp-area="" asp-controller="About" asp-action="Index">About</a>
+                        </li>
+
                         @if (User.IsInRole("Scholar"))
                         {
-                            <li class="nav-item">
-                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <!-- Requirements Dropdown for Scholar-->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="requirementsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Requirements
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="requirementsDropdown">
+                                    <a class="dropdown-item" asp-area="" asp-controller="Requirements" asp-action="CG">Certified True Copy of Grades</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Requirements" asp-action="RF">Registration Form</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Requirements" asp-action="TR">Certified Terminal Report Form</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Requirements" asp-action="GL">Gratitude Letter</a>
+                                </div>
                             </li>
 
-                            <!-- Requirements Dropdown for Scholar-->
+                            <li class="nav-item">
+                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Connect" asp-action="ViewConnect">Connect</a>
+                            </li>
+                            
+                            <!-- Settings Dropdown for Scholar -->
+                            <li class="nav-item">
+                                <div class="dropdown ml-auto">
+                                    <button class="btn btn-warning dropdown-toggle" type="button" id="ScholarSettingsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        SETTINGS
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ScholarSettingsDropdown">
+                                        <a class="dropdown-item text-center" asp-area="" asp-controller="Account" asp-action="ScholarAccountSettings">My Account</a>
+                                        <hr class="dropdown-divider" />
+                                        <a class="dropdown-item text-center" asp-action="Logout" asp-controller="Account">Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+
+                        <!-- Admin specific code ... -->
+                        @if (User.IsInRole("Admin"))
+                        {
+
+                            <!-- User Accounts Dropdown for Admin-->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="userAccountsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    User Accounts
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="userAccountsDropdown">
+                                    <a class="dropdown-item" asp-area="" asp-controller="Admin" asp-action="ScholarAccounts">Scholar Accounts</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Admin" asp-action="InactiveScholars">Inactive Scholars</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Admin" asp-action="AdminAccounts">Admin Accounts</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Admin" asp-action="InactiveAdmins">Inactive Admins</a>
+                                </div>
+                            </li>
+
+                            <!-- Requirements Dropdown for Admin-->
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="requirementsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Requirements
@@ -46,85 +101,19 @@
                                 </div>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Connect" asp-action="ViewConnect">Connect</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="Scholarship" asp-action="Index">Scholarship</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="w3-bar-item w3-button" asp-area="" asp-controller="About" asp-action="Index">About</a>
-                            </li>
-                          
-
-                            <!-- Settings Dropdown for Scholar -->
+                            <!-- Settings Dropdown for Admin -->
                             <li class="nav-item">
                                 <div class="dropdown ml-auto">
-                                    <button class="btn btn-warning dropdown-toggle" type="button" id="ScholarSettingsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-warning dropdown-toggle" type="button" id="AdminSettingsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                                         SETTINGS
                                     </button>
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ScholarSettingsDropdown">
-                                        <a class="dropdown-item text-center" asp-area="" asp-controller="Settings" asp-action="ScholarUpdateAccount">Update Account</a>
-                                        <a class="dropdown-item text-center" asp-area="" asp-controller="Settings" asp-action="ScholarUpdatePassword">Update Password</a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="AdminSettingsDropdown">
+                                        <a class="dropdown-item text-center" asp-area="" asp-controller="Account" asp-action="AdminAccountSettings">My Account</a>
                                         <hr class="dropdown-divider" />
                                         <a class="dropdown-item text-center" asp-action="Logout" asp-controller="Account">Logout</a>
                                     </div>
                                 </div>
                             </li>
-                        }
-
-
-                        <!-- Admin specific code ... -->
-                        @if (User.IsInRole("Admin"))
-                        {
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5 pe-5 justify-content-center">
-                                <!-- Home for Admin-->
-                                <li class="nav-item">
-                                    <a class="w3-bar-item w3-button" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                                </li>
-
-                                <!-- User Accounts Dropdown for Admin-->
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="userAccountsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        User Accounts
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="userAccountsDropdown">
-                                        <a class="dropdown-item" asp-area="" asp-controller="Admin" asp-action="ScholarAccounts">Scholar Accounts</a>
-                                        <a class="dropdown-item" asp-area="" asp-controller="Admin" asp-action="InactiveScholars">Inactive Scholars</a>
-                                        <a class="dropdown-item" asp-area="" asp-controller="Admin" asp-action="AdminAccounts">Admin Accounts</a>
-                                        <a class="dropdown-item" asp-area="" asp-controller="Admin" asp-action="InactiveAdmins">Inactive Admins</a>
-                                    </div>
-                                </li>
-
-                                <!-- Requirements Dropdown for Admin-->
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="requirementsDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Requirements
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="requirementsDropdown">
-                                        <a class="dropdown-item" asp-area="" asp-controller="Requirements" asp-action="AdminCG">Certified True Copy of Grades</a>
-                                        <a class="dropdown-item" asp-area="" asp-controller="Requirements" asp-action="AdminRF">Registration Form</a>
-                                        <a class="dropdown-item" asp-area="" asp-controller="Requirements" asp-action="AdminTR">Certified Terminal Report Form</a>
-                                        <a class="dropdown-item" asp-area="" asp-controller="Requirements" asp-action="AdminGL">Gratitude Letter</a>
-                                    </div>
-                                </li>
-
-                                <!-- Settings Dropdown for Admin -->
-                                <li class="nav-item">
-                                    <div class="dropdown ml-auto">
-                                        <button class="btn btn-warning dropdown-toggle" type="button" id="AdminSettingsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                            SETTINGS
-                                        </button>
-                                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="AdminSettingsDropdown">
-                                            <a class="dropdown-item text-center" asp-area="" asp-controller="Settings" asp-action="AdminUpdateAccount">Update Account</a>
-                                            <a class="dropdown-item text-center" asp-area="" asp-controller="Settings" asp-action="AdminUpdatePassword">Update Password</a>
-                                            <hr class="dropdown-divider" />
-                                            <a class="dropdown-item text-center" asp-action="Logout" asp-controller="Account">Logout</a>
-                                        </div>
-                                    </div>
-                                </li>
-
-                            </ul>
                         }
 
                         @if (!User.Identity.IsAuthenticated)
@@ -141,9 +130,6 @@
                                 </div>
                             </li>
                         }
-
-
-
                     </ul>
                 </div>
             </div>
