@@ -8,6 +8,8 @@ namespace ProjectSmart.Models
     }
     public class Connect
     {
+        private DateTime _date = DateTime.Now;
+
         [Key]
         public int ConnectId { get; set; }
         [Display(Name = "Scholar's Email Address")]
@@ -17,5 +19,6 @@ namespace ProjectSmart.Models
         [Required]
         [Display(Name = "Comment")]
         public string ConnectContent { get; set; }
+        public DateTime CurrentTime { get { return _date; } set { _date = value; } }
     }
 }
