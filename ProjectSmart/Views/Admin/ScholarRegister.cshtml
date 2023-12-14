@@ -1,0 +1,76 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model ScholarRegisterModel
+
+<h1>Register a new Scholar's Account</h1>
+
+<div class="btn-danger" asp-validation-summary="All"></div>
+
+<form asp-action="ScholarRegister" asp-controller="Admin">
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="MiddleName"></label>
+        <input asp-for="MiddleName">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="DateOfBirth"></label>
+        <input asp-for="DateOfBirth" required>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="University"></label>
+        <input asp-for="University">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="Address1"></label>
+        <input asp-for="Address1">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="Address2"></label>
+        <input asp-for="Address2">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="City"></label>
+        <input asp-for="City">
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="Region"></label>
+        <input asp-for="Region">
+    </div>
+    <br />
+    <input type="submit" class="btn btn-primary" value="Submit">
+    <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
+</form>

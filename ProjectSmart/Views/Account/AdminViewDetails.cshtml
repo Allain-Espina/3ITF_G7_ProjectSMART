@@ -1,0 +1,68 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model AdminUsers;
+
+<h1>Your Account Details</h1>
+
+<table class="table table-hover">
+    <tr>
+        <th>Email Address:</th>
+        <td>@Model.AdminEmail</td>
+    </tr>
+    <tr>
+    <tr>
+        <th>Role:</th>
+        <td>@Model.AdminRole</td>
+    </tr>
+    <tr>
+    <tr>
+        <th>First Name:</th>
+        <td>@Model.AdminFirstName</td>
+    </tr>
+    <tr>
+        <th>Middle Name:</th>
+        <td>@Model.AdminMiddleName</td>
+    </tr>
+    <tr>
+        <th>Last Name:</th>
+        <td>@Model.AdminLastName</td>
+    </tr>
+    <tr>
+        <th>Contact Number:</th>
+        <td>@Model.AdminContactNumber</td>
+    </tr>
+    <tr>
+        <th>Date of Birth:</th>
+        <td>@Model.AdminDateOfBirth</td>
+    </tr>
+    <tr>
+        <th>Address Line 1:</th>
+        <td>@Model.AdminAddress1</td>
+    </tr>
+    <tr>
+        <th>Address Line 2:</th>
+        <td>@Model.AdminAddress2</td>
+    </tr>
+    <tr>
+        <th>City of Residence:</th>
+        <td>@Model.AdminCity</td>
+    </tr>
+    <tr>
+        <th>Region:</th>
+        <td>@Model.AdminRegion</td>
+    </tr>
+    <tr>
+        <th>Position:</th>
+        <td>@Model.AdminPosition</td>
+    </tr>
+    <tr>
+        <th>Branch:</th>
+        <td>@Model.AdminBranch</td>
+    </tr>
+
+</table>
+
+<button type="button" onclick="history.back()" class="btn btn-secondary">Return</button>

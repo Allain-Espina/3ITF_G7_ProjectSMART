@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model Registration_Form;
+<form asp-controller="Requirements" asp-action="AdminUpdateRFStatus" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="RF_ID" hidden></label>
+        <input class="form-control" asp-for="RF_ID" readonly hidden>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarEmailAddress" hidden></label>
+        <input class="form-control" asp-for="ScholarEmailAddress" value="@User.Identity.Name" readonly hidden>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="RF_Status"></label>
+        <select class="form-control" asp-for="RF_Status">
+            <option>FOR REVIEW</option>
+            <option>APPROVED</option>
+            <option>DENIED</option>
+        </select>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
+</form>

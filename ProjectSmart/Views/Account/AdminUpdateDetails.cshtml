@@ -1,0 +1,144 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model AdminUsers
+
+<h1>Update your Account Details</h1>
+
+<div class="btn-danger" asp-validation-summary="All"></div>
+
+<div class="btn-danger" asp-validation-summary="All"></div>
+<div>
+    <table>
+        <form asp-action="AdminUpdateDetails" asp-controller="Account">
+        <tr>
+            <td>
+                <label asp-for="AdminId"></label>
+            </td>
+            <td></td>
+            <td>
+                <input readonly asp-for="AdminId">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="AdminEmail"></label>
+            </td>
+            <td></td>
+            <td>
+                <input readonly asp-for="AdminEmail">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="AdminFirstName"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="AdminFirstName">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="AdminMiddleName"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="AdminMiddleName">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="AdminLastName"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="AdminLastName">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="AdminContactNumber"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="AdminContactNumber">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <input asp-for="AdminDateOfBirth" value="2000-01-01" hidden readonly />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="AdminAddress1"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="AdminAddress1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="AdminAddress2"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="AdminAddress2">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="AdminCity"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="AdminCity">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="AdminRegion"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="AdminRegion">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="AdminPosition"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="AdminPosition">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="AdminBranch"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="AdminBranch">
+            </td>
+        </tr>
+        <tr><td><br /></td></tr>
+        <tr>
+            <td>
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </td>
+            <td><br /></td>
+            <td>
+                <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
+            </td>
+        </tr>
+        </form>
+    </table>
+</div>

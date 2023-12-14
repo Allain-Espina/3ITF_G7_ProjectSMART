@@ -1,0 +1,134 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model ScholarUsers
+
+<h1>Update your Account Details</h1>
+
+<div class="btn-danger" asp-validation-summary="All"></div>
+
+<div>
+    <table>
+        <form asp-action="ScholarUpdateDetails" asp-controller="Account">
+        <tr>
+            <td>
+                <label asp-for="ScholarId"></label>
+            </td>
+            <td></td>
+            <td>
+                <input readonly asp-for="ScholarId">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="ScholarEmail"></label>
+            </td>
+            <td></td>
+            <td>
+                <input readonly asp-for="ScholarEmail">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="ScholarFirstName"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="ScholarFirstName">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="ScholarMiddleName"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="ScholarMiddleName">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="ScholarLastName"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="ScholarLastName">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="ScholarContactNumber"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="ScholarContactNumber">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <input asp-for="ScholarDateOfBirth" value="2000-01-01" hidden readonly />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="ScholarUniversity"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="ScholarUniversity">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="ScholarAddress1"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="ScholarAddress1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="ScholarAddress2"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="ScholarAddress2">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="ScholarCity"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="ScholarCity">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="ScholarRegion"></label>
+            </td>
+            <td></td>
+            <td>
+                <input asp-for="ScholarRegion">
+            </td>
+        </tr>
+        <tr><td><br /></td></tr>
+        <tr>
+            <td>
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </td>
+            <td><br /></td>
+            <td>
+                <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
+            </td>
+        </tr>
+        </form>
+    </table>
+</div>

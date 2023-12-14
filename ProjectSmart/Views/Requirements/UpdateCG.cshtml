@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model Certified_Grades;
+
+<h1>Update Certified True Copy of Grades</h1>
+
+<div class="btn-danger" asp-validation-summary="All"></div>
+
+<form asp-controller="Requirements" asp-action="UpdateCG" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <input class="form-control" asp-for="CG_ID" hidden readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="ScholarEmailAddress">Student Name</label>
+        <input class="form-control" asp-for="ScholarEmailAddress" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="CG_Term"></label>
+        <select class="form-control" asp-for="CG_Term" asp-items="@Html.GetEnumSelectList(typeof(Term))">
+        </select>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="CG_AcademicYear">Academic Year</label>
+        <input class="form-control" asp-for="CG_AcademicYear" readonly>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="CG_File"></label>
+        <input asp-for="CG_File" class="form-control" accept="application/pdf" required>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
+</form>

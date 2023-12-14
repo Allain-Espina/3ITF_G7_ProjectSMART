@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model IEnumerable<ProjectSmart.Models.Gratitude_Letter>;
+
+<h1 id="titles" class="d-flex justify-content-start mt-2 pt-2 ms-5 ps-5">UPLOAD REQUIREMENTS: Gratitude Letter to the Foundation</h1>
+
+<hr>
+
+<a class="btn btn-success" asp-action="UploadGL">Upload Gratitude Letter to the Foundation</a>
+
+<hr />
+
+<br />
+
+<table class="table table-hover table-sm">
+    <tr>
+        <th>Term</th>
+        <th>Academic Year</th>
+        <th>Status</th>
+        <th>Date of Upload</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var gl in Model)
+    {
+        <tr>
+            <td>@gl.GL_Term</td>
+            <td>@gl.GL_AcademicYear</td>
+            <td>@gl.GL_Status</td>
+            <td>@gl.GL_DateUploaded</td>
+            <td><a style="color: white;" class="btn btn-primary" asp-action="ViewGL" asp-route-id="@gl.GL_ID">Preview</a></td>
+            <td><a style="color: white;" class="btn btn-primary" asp-action="UpdateGL" asp-route-id="@gl.GL_ID">Update</a></td>
+        </tr>
+    }
+</table>

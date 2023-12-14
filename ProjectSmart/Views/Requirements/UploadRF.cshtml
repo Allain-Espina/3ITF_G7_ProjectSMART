@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model Registration_Form
+
+<h1 id="titles" class="d-flex justify-content-start mt-2 pt-2 ms-5 ps-5">UPLOAD SCHOLAR'S REGISTRATION FORM</h1>
+
+<div class="btn-danger" asp-validation-summary="All"></div>
+
+<hr>
+<form asp-controller="Requirements" asp-action="UploadRF" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="ScholarEmailAddress" hidden></label>
+        <input class="form-control" asp-for="ScholarEmailAddress" value="@User.Identity.Name" readonly hidden>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="RF_Term"></label>
+        <select class="form-control" asp-for="RF_Term" asp-items="@Html.GetEnumSelectList(typeof(Term))">
+        </select>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="RF_File"></label>
+        <input asp-for="RF_File" class="form-control" accept="application/pdf" required>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="RF_Status" hidden></label>
+        <input class="form-control" asp-for="RF_Status" value="FOR REVIEW" readonly hidden>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" onclick="history.back()" class="btn btn-secondary">Cancel</button>
+</form>
+
+
